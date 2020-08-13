@@ -9,7 +9,7 @@ html {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #BFC0C0;
+    background-color: #F9F8F8;
   }
   article,
   aside,
@@ -266,7 +266,6 @@ html {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: "Source Sans Pro";
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1.38316rem;
@@ -649,7 +648,6 @@ html {
     font-size: 1.2rem;
     padding: .8rem;
     text-decoration: none;
-    font-family: "Source Sans Pro";
 }
 
 .nav-item:hover {
@@ -657,7 +655,6 @@ html {
   font-size: 1.2rem;
   padding: .8rem;
   text-decoration: none;
-  font-family: "Source Sans Pro";
 }
 
 .icon-item {

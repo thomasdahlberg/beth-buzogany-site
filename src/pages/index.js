@@ -8,7 +8,7 @@ const HomePage = () => {
     <Layout>
       <Head title="Thomas Dahlberg" />
       <div>
-        Build Content Here
+        <img src="./images/homeimgs/soma.jpg"/>      
       </div>
     </Layout>
   )
