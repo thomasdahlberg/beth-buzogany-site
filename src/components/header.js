@@ -9,10 +9,10 @@ const Header = () => {
             <nav>
                 <ul className={headerStyles.navList}>
                     <li>
-                        <a className={headerStyles.navItem} activeClassName ={headerStyles.activeNavItem} to="/">Home</a>
+                        <a className={headerStyles.navItem} activeClassName ={headerStyles.activeNavItem} href="/">Home</a>
                     </li>
                     <li className={headerStyles.dropdown}>
-                        <a className={headerStyles.dropbtn}>Work</a>
+                        <a className={headerStyles.dropbtn} href="/">Work</a>
                             <div className={headerStyles.dropdownContent}>
                                 <Link to="/work/painting">Painting</Link>
                                 <Link to="/work/sculpture">Sculpture</Link>
