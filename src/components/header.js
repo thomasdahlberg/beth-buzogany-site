@@ -11,8 +11,14 @@ const Header = () => {
                     <li>
                         <a className={headerStyles.navItem} activeClassName ={headerStyles.activeNavItem} to="/">Home</a>
                     </li>
-                    <li>
-                        <a className={headerStyles.navItem} activeClassName ={headerStyles.activeNavItem} href="#projects">Work</a>
+                    <li className={headerStyles.dropdown}>
+                        <a className={headerStyles.dropbtn}>Work</a>
+                            <div className={headerStyles.dropdownContent}>
+                                <a href="#">Painting</a>
+                                <a href="#">Sculpture</a>
+                                <a href="#">Collage</a>
+                                <a href="#">Photo</a>
+                            </div>
                     </li>
                     <li>
                         <a className={headerStyles.navItem} activeClassName ={headerStyles.activeNavItem} href="../resume/Dahlberg_Resume.pdf" target="_blank" rel="noopener noreferrer">CV</a>
