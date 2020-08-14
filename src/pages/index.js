@@ -8,7 +8,8 @@ const HomePage = () => {
     <Layout>
       <Head title="Thomas Dahlberg" />
       <div>
-        <img src="./images/homeimgs/soma.jpg"/>      
+        <img src="./images/homeimgs/soma.jpg"/>
+        <p><em>Sôma</em>; 2020; acrylic, dirt, pencil and foam board, 6in x 9in x 9in</p>      
       </div>
     </Layout>
   )
