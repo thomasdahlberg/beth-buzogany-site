@@ -4,10 +4,17 @@
 }
 
 .content img {
-    width: 80vw;
+    height: 75vh;
 }
 
 .gallery {
+    display: flex;
+    flex-direction: column;
     margin-right: 0;
     float: right;
+}
+
+.gallery img{
+    width: 15vw;
+    margin: 0.5rem;
 }
