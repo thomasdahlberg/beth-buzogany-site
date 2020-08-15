@@ -30,12 +30,12 @@ class Painting extends Component {
                 <Head title="Home" />
                 <div className={workStyles.container}>
                     <div className={workStyles.content}>
-                        <img ref={this.imageRef} src="./images/painting/slopsink.jpg" alt={workContent.workLib[0].title}/>
-                        <p ref={this.captionRef}><em>Sôma</em>; 2020; acrylic, dirt, pencil and foam board, 6in x 9in x 9in</p>      
+                        <img ref={this.imageRef} src={`./images/${workContent.workLib[0].type}/${workContent.workLib[0].file}.jpg`} alt={workContent.workLib[0].title}/>
+                        <p ref={this.captionRef}><em>{workContent.workLib[0].title}</em>; {workContent.workLib[0].year}; {workContent.workLib[0].materials}; {workContent.workLib[0].dimensions}</p>      
                     </div>
                     <div className={workStyles.gallery}>
                             {workContent.workLib.map(({ type, title, file }, idx)=>
-                                <img key={idx} id={idx} onClick={this.handleImageSelect} src={`./images/${type}/${file}.jpg`} alt={title}/>
+                                <a key={idx} id={idx}><img key={idx} id={idx} onClick={this.handleImageSelect} src={`./images/${type}/${file}.jpg`} alt={title}/></a>
                             )}
                     </div>
                 </div>
