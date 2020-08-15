@@ -14,10 +14,10 @@ const Header = () => {
                     <li className={headerStyles.dropdown}>
                         <a className={headerStyles.dropbtn} href="/">Work</a>
                             <div className={headerStyles.dropdownContent}>
-                                <Link to="/work/painting">Painting</Link>
-                                <Link to="/work/sculpture">Sculpture</Link>
-                                <Link to="/work/collage">Collage</Link>
-                                <Link to="/work/photo">Photo</Link>
+                                <Link to="/painting">Painting</Link>
+                                <Link to="/sculpture">Sculpture</Link>
+                                <Link to="/collage">Collage</Link>
+                                <Link to="/photo">Photo</Link>
                             </div>
                     </li>
                     <li>
