@@ -14,7 +14,11 @@
     float: right;
 }
 
-.gallery img{
+.gallery img {
     width: 15vw;
     margin: 0.5rem;
 }
+
+.gallery img:hover {
+    cursor: pointer;
+} 
