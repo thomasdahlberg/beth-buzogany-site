@@ -1,10 +1,12 @@
 .content {
     position: fixed; 
-    margin-left: 0;  
+    margin-left: 0;
 }
 
 .content img {
-    height: 75vh;
+    max-height: 75vh;
+    max-width: 75vw;
+    object-fit: cover;
 }
 
 .gallery {

@@ -1,79 +1,103 @@
-let workLib = [
-                {
-                    title: "Slop Sink",
-                    file: "slopsink",
-                    year: 2020,
-                    materials: "acrylic on canvas",
-                    dimensions: "16in x 20in",
-                    type: "painting"
-                },
-                {
-                    title: "The Painting",
-                    file: "Rm68_1",
-                    year: 2019,
-                    materials: "acrylic on paper",
-                    dimensions: "11in x 15in",
-                    type: "painting"
-                },
-                {
-                    title: "Vestibule",
-                    file: "Rm68_2",
-                    year: 2019,
-                    materials: "acrylic on paper",
-                    dimensions: "11in x 15in",
-                    type: "painting"
-                },
-                {
-                    title: "Boxed Lunch",
-                    file: "Rm68_3",
-                    year: 2019,
-                    materials: "acrylic on paper",
-                    dimensions: "11in x 15in",
-                    type: "painting"
-                },
-                {
-                    title: "Prison",
-                    file: "Rm68_4",
-                    year: 2019,
-                    materials: "acrylic on paper",
-                    dimensions: "11in x 15in",
-                    type: "painting"
-                },
-                {
-                    title: "Alert",
-                    file: "Rm68_5",
-                    year: 2019,
-                    materials: "acrylic on paper",
-                    dimensions: "11in x 15in",
-                    type: "painting"
-                },
-                {
-                    title: "Treehouse",
-                    file: "Rm68_6",
-                    year: 2019,
-                    materials: "acrylic on paper",
-                    dimensions: "11in x 15in",
-                    type: "painting"
-                },
-                {
-                    title: "Plop",
-                    file: "Rm68_7",
-                    year: 2019,
-                    materials: "acrylic on paper",
-                    dimensions: "11in x 15in",
-                    type: "painting"
-                },
-                {
-                    title: "Lean-To",
-                    file: "Rm68_8",
-                    year: 2019,
-                    materials: "acrylic on paper",
-                    dimensions: "11in x 15in",
-                    type: "painting"
-                }
-            ]  
+let paintLib = [
+    {
+        title: "Day Job in C Minor",
+        file: "dj",
+        year: 2018,
+        materials: "acrylic on canvas",
+        dimensions: "60in x 72in",
+        type: "painting"
+    },
+    {
+        title: "Ether",
+        file: "e",
+        year: 2015,
+        materials: "oil & acrylic on shaped canvas",
+        dimensions: "94in x 36in",
+        type: "painting"
+    },
+    {
+        title: "Nose Nose",
+        file: "nn",
+        year: 2015,
+        materials: "oil & acrylic on shaped canvas",
+        dimensions: "40in x 36in (as installed)",
+        type: "painting"
+    },
+    {
+        title: "No Why",
+        file: "nw",
+        year: 2019,
+        materials: "acrylic on panel",
+        dimensions: "16in x 20in",
+        type: "painting"
+    },
+    {
+        title: "Self Exam",
+        file: "se",
+        year: 2018,
+        materials: "oil & acrylic on canvas",
+        dimensions: "56in x 36in",
+        type: "painting"
+    },
+    {
+        title: "Slop Sink",
+        file: "ss",
+        year: 2020,
+        materials: "acrylic on canvas",
+        dimensions: "16in x 20in",
+        type: "painting"
+    },
+    {
+        title: "Stroll",
+        file: "str",
+        year: 2014,
+        materials: "oil & acrylic on canvas",
+        dimensions: "48in x 60in",
+        type: "painting"
+    },
+    {
+        title: "Truckbed",
+        file: "tb",
+        year: 2019,
+        materials: "acrylic on canvas",
+        dimensions: "16in x 20in",
+        type: "painting"
+    },
+    {
+        title: "That Trick",
+        file: "tt",
+        year: 2020,
+        materials: "acrylic and graphite on canvas",
+        dimensions: "16in x 20in",
+        type: "painting"
+    },
+    {
+        title: "Where's Poppa?",
+        file: "wp",
+        year: 2018,
+        materials: "acryli  on canvas",
+        dimensions: "24in x 20in",
+        type: "painting"
+    },
+    {
+        title: "Wipe/Swipe",
+        file: "ws",
+        year: 2015,
+        materials: "oil on canvas",
+        dimensions: "62in x 36in",
+        type: "painting"
+    }
+]  
 
 let sculpLib = [
+    {
+        title: "Agora",
+        file: "a",
+        year: 2020,
+        materials: "acrylic and graphite on foam board",
+        dimensions: "9.5in x 9in x 9in",
+        type: "sculpture"
+    },
     {
         title: "Forum",
         file: "f",
@@ -171,5 +195,196 @@ let sculpLib = [
         type: "sculpture"
     }
 ]
-exports.workLib = workLib;
+
+let collLib = [
+
+]
+
+let paperLib = [
+    {
+        title: "Come",
+        file: "c",
+        year: 2018,
+        materials: "acrylic & paint pens on paper",
+        dimensions: "22in x 30in",
+        type: "paper"
+    },
+    {
+        title: "Community Notes",
+        file: "cn",
+        year: 2018,
+        materials: "acrylic & paint pens on paper",
+        dimensions: "22in x 30in",
+        type: "paper"
+    },
+    {
+        title: "Drive Thru",
+        file: "dt",
+        year: 2018,
+        materials: "acrylic & paint pens on paper",
+        dimensions: "22in x 30in",
+        type: "paper"
+    },
+    {
+        title: "Lean-To",
+        file: "lt",
+        year: 2019,
+        materials: "acrylic on paper",
+        dimensions: "11in x 15in",
+        type: "paper"
+    },
+    {
+        title: "National Aid",
+        file: "na",
+        year: 2018,
+        materials: "acrylic & paint pens on paper",
+        dimensions: "22in x 30in",
+        type: "paper"
+    },
+    {
+        title: "No Way Out",
+        file: "nwo",
+        year: 2018,
+        materials: "acrylic & graphite on paper",
+        dimensions: "22in x 30in",
+        type: "paper"
+    },
+    {
+        title: "Prison",
+        file: "p",
+        year: 2019,
+        materials: "acrylic on paper",
+        dimensions: "11in x 15in",
+        type: "paper"
+    },
+    {
+        title: "Rex",
+        file: "r",
+        year: 2018,
+        materials: "acrylic & paint pens on paper",
+        dimensions: "30in x 22in",
+        type: "paper"
+    },
+    {
+        title: "Safe Harbor",
+        file: "sh",
+        year: 2018,
+        materials: "acrylic & paint pens on paper",
+        dimensions: "22in x 30in",
+        type: "paper"
+    },
+    {
+        title: "Stereoscope",
+        file: "ss",
+        year: 2019,
+        materials: "acrylic on paper",
+        dimensions: "11in x 15in",
+        type: "paper"
+    },
+    {
+        title: "Treehouse",
+        file: "th",
+        year: 2019,
+        materials: "acrylic on paper",
+        dimensions: "11in x 15in",
+        type: "paper"
+    },
+    {
+        title: "The Painting",
+        file: "tp",
+        year: 2019,
+        materials: "acrylic on paper",
+        dimensions: "11in x 15in",
+        type: "paper"
+    },
+    {
+        title: "Vestibule 3",
+        file: "v3",
+        year: 2017,
+        materials: "acrylic on paper",
+        dimensions: "30inx x 22in",
+        type: "paper"
+    },
+    {
+        title: "Vestibule 4",
+        file: "v4",
+        year: 2017,
+        materials: "acrylic on paper",
+        dimensions: "30inx x 22in",
+        type: "paper"
+    },
+    {
+        title: "Vestibule 7",
+        file: "v7",
+        year: 2017,
+        materials: "acrylic on paper",
+        dimensions: "30inx x 22in",
+        type: "paper"
+    },
+    {
+        title: "Vestibule 10",
+        file: "v10",
+        year: 2017,
+        materials: "acrylic on paper",
+        dimensions: "30inx x 22in",
+        type: "paper"
+    },
+    {
+        title: "Vestibule 12",
+        file: "v12",
+        year: 2017,
+        materials: "acrylic on paper",
+        dimensions: "30inx x 22in",
+        type: "paper"
+    },
+    {
+        title: "Vestibule 14",
+        file: "v14",
+        year: 2017,
+        materials: "acrylic on paper",
+        dimensions: "30inx x 22in",
+        type: "paper"
+    },
+    {
+        title: "Vestibule 18",
+        file: "v18",
+        year: 2017,
+        materials: "acrylic on paper",
+        dimensions: "30inx x 22in",
+        type: "paper"
+    },
+    {
+        title: "Vestibule 20",
+        file: "v20",
+        year: 2017,
+        materials: "acrylic on paper",
+        dimensions: "30inx x 22in",
+        type: "paper"
+    },
+    {
+        title: "We Buy Houses",
+        file: "wbh",
+        year: 2018,
+        materials: "acrylic & paint pens on paper",
+        dimensions: "22in x 30in",
+        type: "paper"
+    },
+    {
+        title: "You Are Here",
+        file: "yah",
+        year: 2018,
+        materials: "acrylic & paint pens on paper",
+        dimensions: "22in x 30in",
+        type: "paper"
+    },
+
+]
+
+let photolib = [
+
+]
+exports.paintLib = paintLib;
 exports.sculpLib = sculpLib;
+exports.collLib = collLib;
+exports.paperLib = paperLib;
+exports.photolib = photolib;
