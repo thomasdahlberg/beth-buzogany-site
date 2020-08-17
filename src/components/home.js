@@ -1,15 +1,25 @@
-import React from "react"
+import React, {Component} from "react"
 import homeStyles from "./home.module.scss";
+let workContent = require("./workContent")
 
-const HomeContent = (props) => {
+class HomeContent extends Component {
+    constructor(props) {
+      super(props) 
+      this.state = {
+          homeImages: workContent.homeLib,
+          landingWork: workContent.homeLib[this.rand()]
+      };
+    }
+    render(){
     return (
         <div className={homeStyles.container}>
             <div className={homeStyles.content}>
-                <img src={`./images/${props.landingWork.type}/${props.landingWork.file}.jpg`} alt={props.landingWork.title}/>
-                <p><em>{props.landingWork.title}</em>; {props.landingWork.year}; {props.landingWork.materials}, {props.landingWork.dimensions}</p>      
+                <img src={`./images/${this.state.landingWork.type}/${this.state.landingWork.file}.jpg`} alt={this.state.landingWork.title}/>
+                <p><em>{this.state.landingWork.title}</em>; {this.state.landingWork.year}; {this.state.landingWork.materials}, {this.state.landingWork.dimensions}</p>      
             </div>
         </div>
     )
+    }
 }
 
 export default HomeContent
