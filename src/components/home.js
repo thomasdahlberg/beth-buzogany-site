@@ -5,7 +5,7 @@ const HomeContent = (props) => {
     return (
         <div className={homeStyles.container}>
             <div className={homeStyles.content}>
-                <img src={`./images/${props.landingWork.type}/${props.landingWork.file}.jpg`} alt="soma sculpture"/>
+                <img src={`./images/${props.landingWork.type}/${props.landingWork.file}.jpg`} alt={props.landingWork.title}/>
                 <p><em>{props.landingWork.title}</em>; {props.landingWork.year}; {props.landingWork.materials}, {props.landingWork.dimensions}</p>      
             </div>
         </div>

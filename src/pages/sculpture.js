@@ -41,7 +41,7 @@ class Sculpture extends Component {
                     </div>
                     <div className={workStyles.gallery}>
                             {workContent.sculpLib.map(({ type, title, file }, idx)=>
-                                <a key={idx} id={idx}><img key={idx} id={idx} onClick={this.handleImageSelect} src={`./images/${type}/${file}.jpg`} alt={title}/></a>
+                                <button className={workStyles.button} key={idx} id={idx} onClick={this.handleImageSelect}><img key={idx} id={idx}  src={`./images/${type}/${file}.jpg`} alt={title}/></button>
                             )}
                     </div>
                 </div>
