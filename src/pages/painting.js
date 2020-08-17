@@ -7,9 +7,10 @@ let workContent = require('../components/workContent')
 class Painting extends Component {
     constructor(props) {
         super(props) 
+        let random = this.rand();
         this.state = {
             painting: workContent.paintLib,
-            landingWork: workContent.paintLib[this.rand()]
+            landingWork: workContent.paintLib[random]
         };
     }
     imageRef = React.createRef();

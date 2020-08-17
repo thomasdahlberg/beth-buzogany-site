@@ -5,9 +5,10 @@ let workContent = require("./workContent")
 class HomeContent extends Component {
     constructor(props) {
       super(props) 
+      let random = this.rand()
       this.state = {
         homeImages: workContent.homeLib,
-        landingWork: workContent.homeLib[this.rand()]
+        landingWork: workContent.homeLib[random],
       };
     }
 
