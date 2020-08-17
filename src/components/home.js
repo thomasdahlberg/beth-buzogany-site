@@ -6,8 +6,8 @@ class HomeContent extends Component {
     constructor(props) {
       super(props) 
       this.state = {
-          homeImages: workContent.homeLib,
-          landingWork: workContent.homeLib[this.rand()]
+        homeImages: workContent.homeLib,
+        landingWork: workContent.homeLib[this.rand()]
       };
     }
 

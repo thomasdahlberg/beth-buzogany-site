@@ -33,7 +33,7 @@ class Sculpture extends Component {
     render() {
         return (
             <Layout>
-                <Head title="Home" />
+                <Head title="Sculpture" />
                 <div className={workStyles.container}>
                     <div className={workStyles.content}>
                         <img ref={this.imageRef} src={`./images/${this.state.landingWork.type}/${this.state.landingWork.file}.jpg`} alt={this.state.landingWork.title}/>

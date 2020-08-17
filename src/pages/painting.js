@@ -33,10 +33,10 @@ class Painting extends Component {
     render() {
         return (
             <Layout>
-                <Head title="Home" />
+                <Head title="Painting" />
                 <div className={workStyles.container}>
                     <div className={workStyles.content}>
-                        <img ref={this.imageRef} src={`./images/${this.state.landingWork.type}/${this.state.landingWork.file}.jpg`} alt={this.state.landingWork.title}/>
+                        <img ref={this.imageRef} src={`./images/painting/${this.state.landingWork.file}.jpg`} alt={this.state.landingWork.title}/>
                         <p ref={this.captionRef}><em>{this.state.landingWork.title}</em>; {this.state.landingWork.year}; {this.state.landingWork.materials}; {this.state.landingWork.dimensions}</p>      
                     </div>
                     <div className={workStyles.gallery}>

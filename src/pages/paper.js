@@ -33,7 +33,7 @@ class Paper extends Component {
     render() {
         return (
             <Layout>
-                <Head title="Home" />
+                <Head title="Paper" />
                 <div className={workStyles.container}>
                     <div className={workStyles.content}>
                         <img ref={this.imageRef} src={`./images/${this.state.landingWork.type}/${this.state.landingWork.file}.jpg`} alt={this.state.landingWork.title}/>

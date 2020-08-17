@@ -9,7 +9,7 @@ const Header = () => {
             <nav>
                 <ul className={headerStyles.navList}>
                     <li>
-                        <a className={headerStyles.navItem} activeClassName ={headerStyles.activeNavItem} href="/">Home</a>
+                        <a className={headerStyles.navItem} href="/">Home</a>
                     </li>
                     <li className={headerStyles.dropdown}>
                         <a className={headerStyles.dropbtn} href="/">Work</a>
@@ -21,7 +21,7 @@ const Header = () => {
                             </div>
                     </li>
                     <li>
-                        <a className={headerStyles.navItem} activeClassName ={headerStyles.activeNavItem} href="../cv/Dahlberg_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                        <a className={headerStyles.navItem} href="../cv/Dahlberg_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
                     </li>
                 </ul>
             </nav>
