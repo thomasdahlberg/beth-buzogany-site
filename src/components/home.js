@@ -10,6 +10,12 @@ class HomeContent extends Component {
           landingWork: workContent.homeLib[this.rand()]
       };
     }
+
+    rand(maxLimit = workContent.paperLib.length) {
+        let rand = Math.random() * maxLimit;
+        return Math.floor(rand);
+       }
+
     render(){
     return (
         <div className={homeStyles.container}>
