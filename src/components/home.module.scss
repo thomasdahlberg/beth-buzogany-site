@@ -1,0 +1,10 @@
+.content {
+    position: fixed; 
+    margin-left: 0;
+}
+
+.content img {
+    max-height: 80vh;
+    max-width: 80vw;
+    object-fit: cover;
+}

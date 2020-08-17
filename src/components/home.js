@@ -1,10 +1,13 @@
 import React from "react"
+import homeStyles from "./home.module.scss";
 
-const HomeContent = () => {
+const HomeContent = (props) => {
     return (
-        <div>
-            <img src="./images/homeimgs/soma.jpg" alt="soma sculpture"/>
-            <p><em>Sôma</em>; 2020; acrylic, dirt, pencil and foam board, 6in x 9in x 9in</p>      
+        <div className={homeStyles.container}>
+            <div className={homeStyles.content}>
+                <img src={`./images/${props.landingWork.type}/${props.landingWork.file}.jpg`} alt="soma sculpture"/>
+                <p><em>{props.landingWork.title}</em>; {props.landingWork.year}; {props.landingWork.materials}, {props.landingWork.dimensions}</p>      
+            </div>
         </div>
     )
 }

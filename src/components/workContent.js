@@ -1,4 +1,183 @@
+let homeLib = [
+    {
+        title: "Mask",
+        file: "m",
+        year: 2020,
+        materials: "acrylic and grease pencil on panel",
+        dimensions: "14in x 11in",
+        type: "painting"
+    },
+    {
+        title: "Sign Painting 2",
+        file: "s2",
+        year: 2020,
+        materials: "acrylic on canvas",
+        dimensions: "16in x 20in",
+        type: "painting"
+    },
+    {
+        title: "Corner Pocket",
+        file: "cp",
+        year: 2017,
+        materials: "acrylic, mirror & foam board",
+        dimensions: "16in x 21in x 6in",
+        type: "sculpture"
+    },
+    {
+        title: "Figurehead",
+        file: "fh",
+        year: 2017,
+        materials: "acrylic, mirror & foam board",
+        dimensions: "16in x 12in x 10in",
+        type: "sculpture"
+    },
+    {
+        title: "Forum",
+        file: "f",
+        year: 2020,
+        materials: "acrylic and gaffer tape on foam board",
+        dimensions: "9.5in x 9in x 9in",
+        type: "sculpture"
+    },
+    {
+        title: "Gristle",
+        file: "g",
+        year: 2019,
+        materials: "acrylic, mylar, petroleum jelly & foam board",
+        dimensions: "24in x 32in x 16in",
+        type: "sculpture"
+    },
+    {
+        title: "Herrenvolk III",
+        file: "h3",
+        year: 2017,
+        materials: "acrylic on foam board",
+        dimensions: "13in x 24.7in x 8in",
+        type: "sculpture"
+    },
+    {
+        title: "Ether",
+        file: "e",
+        year: 2015,
+        materials: "oil & acrylic on shaped canvas",
+        dimensions: "94in x 36in",
+        type: "painting"
+    },
+    {
+        title: "Molehill",
+        file: "mh",
+        year: 2017,
+        materials: "acrylic on foam board",
+        dimensions: "8in x 16in x 4in",
+        type: "sculpture"
+    },
+    {
+        title: "Night Watch Man",
+        file: "nwm",
+        year: 2018,
+        materials: "acrylic. foam, paint pens, pins & foam board",
+        dimensions: "16in x 18in x 4in",
+        type: "sculpture"
+    },
+    {
+        title: "Polis",
+        file: "p",
+        year: 2020,
+        materials: "acrylic & graphite on foam board",
+        dimensions: "9in x 9in x 10in",
+        type: "sculpture"
+    },
+    {
+        title: "Sôma",
+        file: "s",
+        year: 2020,
+        materials: "acrylic, dirt, pencil & foam board",
+        dimensions: "6in x 9in x 9in",
+        type: "sculpture"
+    },
+    {
+        title: "Three Doors, Two Highways, One Cell",
+        file: "3d",
+        year: 2019,
+        materials: "acrylic on foam board",
+        dimensions: "16in x 48in x 8in",
+        type: "sculpture"
+    },
+    {
+        title: "Weltanschauung",
+        file: "w",
+        year: 2018,
+        materials: "acrylic & paint pens on foam board",
+        dimensions: "9in x 32in x 9in",
+        type: "sculpture"
+    },
+    {
+        title: "Drive Thru",
+        file: "dt",
+        year: 2018,
+        materials: "acrylic & paint pens on paper",
+        dimensions: "22in x 30in",
+        type: "paper"
+    },
+    {
+        title: "Safe Harbor",
+        file: "sh",
+        year: 2018,
+        materials: "acrylic & paint pens on paper",
+        dimensions: "22in x 30in",
+        type: "paper"
+    },
+    {
+        title: "Treehouse",
+        file: "th",
+        year: 2019,
+        materials: "acrylic on paper",
+        dimensions: "11in x 15in",
+        type: "paper"
+    },
+    {
+        title: "We Buy Houses",
+        file: "wbh",
+        year: 2018,
+        materials: "acrylic & paint pens on paper",
+        dimensions: "22in x 30in",
+        type: "paper"
+    },
+    {
+        title: "Outlook",
+        file: "ol",
+        year: 2015,
+        materials: "acrylic on cardboard",
+        dimensions: "6in x 16in x 6in",
+        type: "sculpture"
+    },
+    {
+        title: "Though as for That the Passing There",
+        file: "tafttpt",
+        year: 2019,
+        materials: "paper & colored pencil",
+        dimensions: "16in x 24in",
+        type: "collage"
+    },
+    {
+        title: "The Diary of an Antipode",
+        file: "tdoaa",
+        year: 2020,
+        materials: "paper & colored pencil",
+        dimensions: "16in x 24in",
+        type: "collage"
+    },
+]
+
 let paintLib = [
+    {
+        title: "Crisis Actor",
+        file: "ca",
+        year: 2018,
+        materials: "oil & acrylic on canvas",
+        dimensions: "60in x 84in",
+        type: "painting"
+    },
     {
         title: "Day Job in C Minor",
         file: "dj",
@@ -13,6 +192,14 @@ let paintLib = [
         year: 2015,
         materials: "oil & acrylic on shaped canvas",
         dimensions: "94in x 36in",
+        type: "painting"
+    },
+    {
+        title: "Mask",
+        file: "m",
+        year: 2020,
+        materials: "acrylic and grease pencil on panel",
+        dimensions: "14in x 11in",
         type: "painting"
     },
     {
@@ -32,11 +219,35 @@ let paintLib = [
         type: "painting"
     },
     {
+        title: "Select Y'all",
+        file: "sy",
+        year: 2018,
+        materials: "acrylic on canvas",
+        dimensions: "20in x 16in",
+        type: "painting"
+    },
+    {
         title: "Self Exam",
         file: "se",
         year: 2018,
         materials: "oil & acrylic on canvas",
         dimensions: "56in x 36in",
+        type: "painting"
+    },
+    {
+        title: "Sign Painting",
+        file: "sp",
+        year: 2020,
+        materials: "acrylic & graphite on panel",
+        dimensions: "12in x 16in",
+        type: "painting"
+    },
+    {
+        title: "Sign Painting 2",
+        file: "s2",
+        year: 2020,
+        materials: "acrylic on canvas",
+        dimensions: "16in x 20in",
         type: "painting"
     },
     {
@@ -99,6 +310,22 @@ let sculpLib = [
         type: "sculpture"
     },
     {
+        title: "Corner Pocket",
+        file: "cp",
+        year: 2017,
+        materials: "acrylic, mirror & foam board",
+        dimensions: "16in x 21in x 6in",
+        type: "sculpture"
+    },
+    {
+        title: "Figurehead",
+        file: "fh",
+        year: 2017,
+        materials: "acrylic, mirror & foam board",
+        dimensions: "16in x 12in x 10in",
+        type: "sculpture"
+    },
+    {
         title: "Forum",
         file: "f",
         year: 2020,
@@ -123,6 +350,30 @@ let sculpLib = [
         type: "sculpture"
     },
     {
+        title: "Impinged",
+        file: "i",
+        year: 2016,
+        materials: "acrylic on foam board",
+        dimensions: "11in x 24in x 4in",
+        type: "sculpture"
+    },
+    {
+        title: "Kleos",
+        file: "k",
+        year: 2020,
+        materials: "acrylic, gaffer tape & foam board",
+        dimensions: "8in x 12in x 7in",
+        type: "sculpture"
+    },
+    {
+        title: "Molehill",
+        file: "mh",
+        year: 2017,
+        materials: "acrylic on foam board",
+        dimensions: "8in x 16in x 4in",
+        type: "sculpture"
+    },
+    {
         title: "Nose",
         file: "n",
         year: 2018,
@@ -144,6 +395,22 @@ let sculpLib = [
         year: 2018,
         materials: "acrylic. foam, paint pens, pins & foam board",
         dimensions: "16in x 18in x 4in",
+        type: "sculpture"
+    },
+    {
+        title: "On Beyond",
+        file: "ob",
+        year: 2017,
+        materials: "acrylic on canvas on shaped wood",
+        dimensions: "24in x 18in x 9in",
+        type: "sculpture"
+    },
+    {
+        title: "Outlook",
+        file: "ol",
+        year: 2015,
+        materials: "acrylic on cardboard",
+        dimensions: "6in x 16in x 6in",
         type: "sculpture"
     },
     {
@@ -197,7 +464,54 @@ let sculpLib = [
 ]
 
 let collLib = [
-
+    {
+        title: "A Woman Told Me This",
+        file: "awtmt",
+        year: 2020,
+        materials: "paper, photo, marker & colored pencil",
+        dimensions: "24in x 24in",
+        type: "collage"
+    },
+    {
+        title: "Hunter-Gatherers",
+        file: "hg",
+        year: 2019,
+        materials: "paper & colored pencil",
+        dimensions: "48in x 96in",
+        type: "collage"
+    },
+    {
+        title: "Know Where to Stand",
+        file: "kwts",
+        year: 2019,
+        materials: "paper, photo, marker & colored pencil",
+        dimensions: "12in x 12in",
+        type: "collage"
+    },
+    {
+        title: "Pillar",
+        file: "p",
+        year: 2019,
+        materials: "paper & photo",
+        dimensions: "12in x 12in",
+        type: "collage"
+    },
+    {
+        title: "Though as for That the Passing There",
+        file: "tafttpt",
+        year: 2019,
+        materials: "paper & colored pencil",
+        dimensions: "16in x 24in",
+        type: "collage"
+    },
+    {
+        title: "The Diary of an Antipode",
+        file: "tdoaa",
+        year: 2020,
+        materials: "paper & colored pencil",
+        dimensions: "16in x 24in",
+        type: "collage"
+    },
 ]
 
 let paperLib = [
@@ -380,11 +694,9 @@ let paperLib = [
 
 ]
 
-let photolib = [
 
-]
+exports.homeLib = homeLib;
 exports.paintLib = paintLib;
 exports.sculpLib = sculpLib;
 exports.collLib = collLib;
 exports.paperLib = paperLib;
-exports.photolib = photolib;

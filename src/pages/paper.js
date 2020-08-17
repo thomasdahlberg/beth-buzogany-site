@@ -8,11 +8,17 @@ class Paper extends Component {
     constructor(props) {
         super(props) 
         this.state = {
-            paper: workContent.paperLib
+            paper: workContent.paperLib,
+            landingWork: workContent.paperLib[this.rand()]
         };
     }
     imageRef = React.createRef();
     captionRef = React.createRef();
+
+    rand(maxLimit = workContent.paperLib.length) {
+        let rand = Math.random() * maxLimit;
+        return Math.floor(rand);
+       }
 
     handleImageSelect = (e) => {
         console.log(e.target.id);
@@ -30,8 +36,8 @@ class Paper extends Component {
                 <Head title="Home" />
                 <div className={workStyles.container}>
                     <div className={workStyles.content}>
-                        <img ref={this.imageRef} src={`./images/${workContent.paperLib[0].type}/${workContent.paperLib[0].file}.jpg`} alt={workContent.paperLib[0].title}/>
-                        <p ref={this.captionRef}><em>{workContent.paperLib[0].title}</em>; {workContent.paperLib[0].year}; {workContent.paperLib[0].materials}; {workContent.paperLib[0].dimensions}</p>      
+                        <img ref={this.imageRef} src={`./images/${this.state.landingWork.type}/${this.state.landingWork.file}.jpg`} alt={this.state.landingWork.title}/>
+                        <p ref={this.captionRef}><em>{this.state.landingWork.title}</em>; {this.state.landingWork.year}; {this.state.landingWork.materials}; {this.state.landingWork.dimensions}</p>      
                     </div>
                     <div className={workStyles.gallery}>
                             {workContent.paperLib.map(({ type, title, file }, idx)=>

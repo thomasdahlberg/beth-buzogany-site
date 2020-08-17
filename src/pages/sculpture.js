@@ -8,11 +8,17 @@ class Sculpture extends Component {
     constructor(props) {
         super(props) 
         this.state = {
-            sculpture: workContent.sculpLib
+            sculpture: workContent.sculpLib,
+            landingWork: workContent.sculpLib[this.rand()]
         };
     }
     imageRef = React.createRef();
     captionRef = React.createRef();
+
+    rand(maxLimit = workContent.sculpLib.length) {
+        let rand = Math.random() * maxLimit;
+        return Math.floor(rand);
+       }
 
     handleImageSelect = (e) => {
         console.log(e.target.id);
@@ -30,8 +36,8 @@ class Sculpture extends Component {
                 <Head title="Home" />
                 <div className={workStyles.container}>
                     <div className={workStyles.content}>
-                        <img ref={this.imageRef} src={`./images/${workContent.sculpLib[0].type}/${workContent.sculpLib[0].file}.jpg`} alt={workContent.sculpLib[0].title}/>
-                        <p ref={this.captionRef}><em>{workContent.sculpLib[0].title}</em>; {workContent.sculpLib[0].year}; {workContent.sculpLib[0].materials}; {workContent.sculpLib[0].dimensions}</p>      
+                        <img ref={this.imageRef} src={`./images/${this.state.landingWork.type}/${this.state.landingWork.file}.jpg`} alt={this.state.landingWork.title}/>
+                        <p ref={this.captionRef}><em>{this.state.landingWork.title}</em>; {this.state.landingWork.year}; {this.state.landingWork.materials}; {this.state.landingWork.dimensions}</p>      
                     </div>
                     <div className={workStyles.gallery}>
                             {workContent.sculpLib.map(({ type, title, file }, idx)=>

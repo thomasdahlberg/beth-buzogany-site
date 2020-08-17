@@ -8,15 +8,21 @@ class Painting extends Component {
     constructor(props) {
         super(props) 
         this.state = {
-            paintings: workContent.paintLib
+            painting: workContent.paintLib,
+            landingWork: workContent.paintLib[this.rand()]
         };
     }
     imageRef = React.createRef();
     captionRef = React.createRef();
 
+    rand(maxLimit = workContent.paintLib.length) {
+        let rand = Math.random() * maxLimit;
+        return Math.floor(rand);
+       }
+
     handleImageSelect = (e) => {
         console.log(e.target.id);
-        const selectedWork = this.state.paintings[e.target.id];
+        const selectedWork = this.state.painting[e.target.id];
         const imageNode = this.imageRef.current;
         const captionNode = this.captionRef.current;
         imageNode.src = `./images/${selectedWork.type}/${selectedWork.file}.jpg`;
@@ -30,8 +36,8 @@ class Painting extends Component {
                 <Head title="Home" />
                 <div className={workStyles.container}>
                     <div className={workStyles.content}>
-                        <img ref={this.imageRef} src={`./images/${workContent.paintLib[0].type}/${workContent.paintLib[0].file}.jpg`} alt={workContent.paintLib[0].title}/>
-                        <p ref={this.captionRef}><em>{workContent.paintLib[0].title}</em>; {workContent.paintLib[0].year}; {workContent.paintLib[0].materials}; {workContent.paintLib[0].dimensions}</p>      
+                        <img ref={this.imageRef} src={`./images/${this.state.landingWork.type}/${this.state.landingWork.file}.jpg`} alt={this.state.landingWork.title}/>
+                        <p ref={this.captionRef}><em>{this.state.landingWork.title}</em>; {this.state.landingWork.year}; {this.state.landingWork.materials}; {this.state.landingWork.dimensions}</p>      
                     </div>
                     <div className={workStyles.gallery}>
                             {workContent.paintLib.map(({ type, title, file }, idx)=>
