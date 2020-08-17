@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import workStyles from "../components/work.module.scss"
 import Layout from "../components/layout"
 import Head from "../components/head"
-let workContent = require('../components/workContent') 
+let workContent = require('../components/workContent')
 
 class Collage extends Component {
     constructor(props) {
@@ -31,13 +31,14 @@ class Collage extends Component {
     }
 
     render() {
+        let { landingWork } = this.state
         return (
             <Layout>
                 <Head title="Collage" />
                 <div className={workStyles.container}>
                     <div className={workStyles.content}>
-                        <img ref={this.imageRef} src={`./images/${this.state.landingWork.type}/${this.state.landingWork.file}.jpg`} alt={this.state.landingWork.title}/>
-                        <p ref={this.captionRef}><em>{this.state.landingWork.title}</em>; {this.state.landingWork.year}; {this.state.landingWork.materials}; {this.state.landingWork.dimensions}</p>      
+                        <img ref={this.imageRef} src={`./images/${landingWork.type}/${landingWork.file}.jpg`} alt={landingWork.title}/>
+                        <p ref={this.captionRef}><em>{landingWork.title}</em>; {landingWork.year}; {landingWork.materials}; {landingWork.dimensions}</p>      
                     </div>
                     <div className={workStyles.gallery}>
                             {workContent.collLib.map(({ type, title, file }, idx)=>

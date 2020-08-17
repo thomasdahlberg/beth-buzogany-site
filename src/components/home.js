@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 import homeStyles from "./home.module.scss";
 let workContent = require("./workContent")
 
@@ -17,11 +17,12 @@ class HomeContent extends Component {
        }
 
     render(){
+    let { landingWork } = this.state
     return (
         <div className={homeStyles.container}>
             <div className={homeStyles.content}>
-                <img src={`./images/${this.state.landingWork.type}/${this.state.landingWork.file}.jpg`} alt={this.state.landingWork.title}/>
-                <p><em>{this.state.landingWork.title}</em>; {this.state.landingWork.year}; {this.state.landingWork.materials}, {this.state.landingWork.dimensions}</p>      
+                <img src={`./images/${landingWork.type}/${landingWork.file}.jpg`} alt={landingWork.title}/>
+                <p><em>{landingWork.title}</em>; {landingWork.year}; {landingWork.materials}, {landingWork.dimensions}</p>      
             </div>
         </div>
     )
