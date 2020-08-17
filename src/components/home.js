@@ -12,6 +12,15 @@ class HomeContent extends Component {
       };
     }
 
+    refreshState = () => this.setState({landingWork: workContent.homeLib[this.rand()]})
+
+    componentDidMount(){
+        this.refreshState();
+    }
+
+    componentDidUpdate(){
+    }
+
     rand(maxLimit = workContent.paperLib.length) {
         let rand = Math.random() * maxLimit;
         return Math.floor(rand);
