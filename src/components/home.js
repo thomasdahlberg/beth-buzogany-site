@@ -13,11 +13,11 @@ class HomeContent extends Component {
       };
     }
 
-    refreshState = () => this.setState({landingWork: workContent.homeLib[this.rand()]})
+    // refreshState = () => this.setState({landingWork: workContent.homeLib[this.rand()]})
 
-    componentDidMount(){
-        this.refreshState();
-    }
+    // componentDidMount(){
+    //     this.refreshState();
+    // }
 
 
     rand(maxLimit = workContent.paperLib.length) {
