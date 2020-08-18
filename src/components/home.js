@@ -1,6 +1,7 @@
-import React, { Component } from "react"
-import homeStyles from "./home.module.scss";
-let workContent = require("./workContent")
+import React, { Component } from "react";
+import workStyles from "./work.module.scss";
+let workContent = require("./workContent");
+const images = require.context("../../public/images", true);
 
 class HomeContent extends Component {
     constructor(props) {
@@ -18,8 +19,6 @@ class HomeContent extends Component {
         this.refreshState();
     }
 
-    componentDidUpdate(){
-    }
 
     rand(maxLimit = workContent.paperLib.length) {
         let rand = Math.random() * maxLimit;
@@ -29,9 +28,9 @@ class HomeContent extends Component {
     render(){
     let { landingWork } = this.state
     return (
-        <div className={homeStyles.container}>
-            <div className={homeStyles.content}>
-                <img src={`./images/${landingWork.type}/${landingWork.file}.jpg`} alt={landingWork.title}/>
+        <div className={workStyles.container}>
+            <div className={workStyles.content}>
+                <img src={images(`./${landingWork.type}/${landingWork.file}.jpg`)} alt={landingWork.title}/>
                 <p><em>{landingWork.title}</em>; {landingWork.year}; {landingWork.materials}, {landingWork.dimensions}</p>      
             </div>
         </div>

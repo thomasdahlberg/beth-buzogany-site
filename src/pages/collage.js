@@ -1,51 +1,39 @@
 import React, { Component } from "react"
-import workStyles from "../components/work.module.scss"
 import Layout from "../components/layout"
 import Head from "../components/head"
-let workContent = require('../components/workContent')
+import Display from "../components/display"
+let workContent = require('../components/workContent') 
 
 class Collage extends Component {
     constructor(props) {
         super(props) 
+        let random = this.rand();
         this.state = {
             collage: workContent.collLib,
-            landingWork: workContent.collLib[this.rand()]
+            landingWork: workContent.collLib[random]
         };
     }
-    imageRef = React.createRef();
-    captionRef = React.createRef();
 
     rand(maxLimit = workContent.collLib.length) {
         let rand = Math.random() * maxLimit;
         return Math.floor(rand);
        }
+    
+       refreshState = () => this.setState({landingWork: workContent.collLib[this.rand()]})
 
-    handleImageSelect = (e) => {
-        console.log(e.target.id);
-        const selectedWork = this.state.collage[e.target.id];
-        const imageNode = this.imageRef.current;
-        const captionNode = this.captionRef.current;
-        imageNode.src = `./images/${selectedWork.type}/${selectedWork.file}.jpg`;
-        imageNode.alt = `${selectedWork.title}`;
-        captionNode.innerHTML = `<em>${selectedWork.title}</em>; ${selectedWork.year}; ${selectedWork.materials}; ${selectedWork.dimensions}`;
+    componentDidMount(){
+        this.refreshState();
     }
+   
 
     render() {
-        let { landingWork } = this.state
         return (
             <Layout>
                 <Head title="Collage" />
-                <div className={workStyles.container}>
-                    <div className={workStyles.content}>
-                        <img ref={this.imageRef} src={`./images/${landingWork.type}/${landingWork.file}.jpg`} alt={landingWork.title}/>
-                        <p ref={this.captionRef}><em>{landingWork.title}</em>; {landingWork.year}; {landingWork.materials}; {landingWork.dimensions}</p>      
-                    </div>
-                    <div className={workStyles.gallery}>
-                            {workContent.collLib.map(({ type, title, file }, idx)=>
-                                <button className={workStyles.button} key={idx} id={idx} onClick={this.handleImageSelect}><img key={idx} id={idx}  src={`./images/${type}/${file}.jpg`} alt={title}/></button>
-                            )}
-                    </div>
-                </div>
+                <Display 
+                    library={this.state.collage}
+                    landingWork={this.state.landingWork}    
+                />
             </Layout>
         )
     }
