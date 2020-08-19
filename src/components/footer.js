@@ -1,12 +1,37 @@
-import React from "react"
+import React, { Fragment } from "react"
+import Media from 'react-media';
 import footerStyles from "./footer.module.scss"
 
 const Footer = () => {
     return(
-        <footer className={footerStyles.footer}>
-            <p className={footerStyles.contact}>thomas.dahlberg8(at)gmail(dot)com</p>
-            <p className={footerStyles.footerText}>Thomas Dahlberg © 2020</p>
-        </footer>
+            <Media queries={{
+          small: "(max-width: 599px)",
+          medium: "(min-width: 600px) and (max-width: 1199px)",
+          large: "(min-width: 1200px)"
+        }}>
+          {matches => (
+            <Fragment>
+            {matches.small &&
+                <div className={footerStyles.footerSmall}>
+                    <p className={footerStyles.contactSmall}>thomas.dahlberg8(at)gmail(dot)com</p>
+                    <p className={footerStyles.footerTextSmall}>Thomas Dahlberg © 2020</p>
+                </div>
+            }
+            {matches.medium && 
+                <footer className={footerStyles.footer}>
+                    <p className={footerStyles.contact}>thomas.dahlberg8(at)gmail(dot)com</p>
+                    <p className={footerStyles.footerText}>Thomas Dahlberg © 2020</p>
+                </footer>
+            }
+            {matches.large && 
+                <footer className={footerStyles.footer}>
+                    <p className={footerStyles.contact}>thomas.dahlberg8(at)gmail(dot)com</p>
+                    <p className={footerStyles.footerText}>Thomas Dahlberg © 2020</p>
+                </footer>
+            }
+            </Fragment>
+          )}
+        </Media>
     )
 }
 

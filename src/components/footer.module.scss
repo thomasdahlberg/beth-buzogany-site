@@ -9,11 +9,31 @@
     font-size: 1rem;
     padding-top: 1.45rem;
     margin-right: 1.45rem;
-    font-family: "Droid Sans Mono";
+    font-family: "Droid Sans Mono", monospace;
 }
 
 .contact {
     font-size: 1rem;
     margin-left: 1.45rem;
-    font-family: "Droid Sans Mono";
+    font-family: "Droid Sans Mono", monospace;
+}
+
+.footer-text-small {
+    margin-bottom: 0;
+    font-size: .75rem;
+    font-family: "Droid Sans Mono", monospace;
+}
+
+.contact-small {
+    // margin-top: .5rem;
+    margin-bottom: 0;
+    font-size: .75rem;
+    font-family: "Droid Sans Mono", monospace;
+}
+
+.footer-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

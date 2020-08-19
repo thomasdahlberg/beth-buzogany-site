@@ -27,7 +27,7 @@ html {
   section,
   summary {
     display: block;
-    font-family: "Droid Sans Mono";
+    font-family: "Droid Sans Mono", monospace;
   }
   audio,
   canvas,
@@ -389,7 +389,7 @@ html {
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    font-family: "Droid Sans Mono";
+    font-family: "Droid Sans Mono", monospace;
   }
   figure {
     margin-left: 0;

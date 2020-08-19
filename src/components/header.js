@@ -1,16 +1,26 @@
-import React from "react"
+import React, { Fragment } from "react";
+import Media from 'react-media';
 import { Link } from "gatsby"
 import headerStyles from './header.module.scss'
 
 const Header = () => {
     return(
         <header className={headerStyles.container}>
-            <h1 className={headerStyles.title}>Thomas Dahlberg</h1>
+            <Media queries={{
+                small: "(max-width: 599px)",
+                medium: "(min-width: 600px) and (max-width: 1199px)",
+                large: "(min-width: 1200px)"
+            }}>
+            {matches => (
+                <Fragment>
+                    {matches.small && <a className={headerStyles.a} href="/"><h1 className={headerStyles.titleSmall}>Thomas Dahlberg</h1></a>}
+                    {matches.medium && <a className={headerStyles.a} href="/"><h1 className={headerStyles.title}>Thomas Dahlberg</h1></a>}
+                    {matches.large && <a className={headerStyles.a} href="/"><h1 className={headerStyles.title}>Thomas Dahlberg</h1></a>}
+                </Fragment>
+            )}
+            </Media>
             <nav>
                 <ul className={headerStyles.navList}>
-                    <li>
-                        <a className={headerStyles.navItem} href="/">Home</a>
-                    </li>
                     <li className={headerStyles.dropdown}>
                         <a className={headerStyles.dropbtn} href="/">Work</a>
                             <div className={headerStyles.dropdownContent}>

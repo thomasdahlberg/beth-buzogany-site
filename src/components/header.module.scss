@@ -37,7 +37,15 @@
     color: #272838;
     font-size: 1.85rem;
     text-decoration: none;
-    font-family: "Helvetica";
+    font-family: "Helvetica", sans-serif;
+}
+.title-small {
+    margin-top: 1.45rem;
+    margin-left: 1.45rem;
+    color: #272838;
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-family: "Helvetica", sans-serif;
 }
 
 .dropbtn {
@@ -80,4 +88,8 @@
 .dropdown:hover .dropbtn {
     color: #F9F8F8;
     background-color: #7E7F9A;
+}
+
+.a {
+    text-decoration: none;
 }
