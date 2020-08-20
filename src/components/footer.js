@@ -10,16 +10,16 @@ const Footer = () => {
         }}>
           {matches => (
             <Fragment>
-            {matches.large && 
-                <footer className={footerStyles.footer}>
-                    <p className={footerStyles.contact}>thomas.dahlberg8(at)gmail(dot)com</p>
-                    <p className={footerStyles.footerText}>Thomas Dahlberg © 2020</p>
-                </footer>
-            }
             {matches.small &&
                 <footer className={footerStyles.footerSmall}>
                     <p className={footerStyles.contactSmall}>thomas.dahlberg8(at)gmail(dot)com</p>
                     <p className={footerStyles.footerTextSmall}>Thomas Dahlberg © 2020</p>
+                </footer>
+            }
+            {matches.large && 
+                <footer className={footerStyles.footer}>
+                    <p className={footerStyles.contact}>thomas.dahlberg8(at)gmail(dot)com</p>
+                    <p className={footerStyles.footerText}>Thomas Dahlberg © 2020</p>
                 </footer>
             }
             </Fragment>
