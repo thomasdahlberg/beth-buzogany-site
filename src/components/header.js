@@ -5,7 +5,7 @@ import headerStyles from './header.module.scss'
 
 const Header = () => {
     return(
-        <header className={headerStyles.container}>
+        <header>
             <Media queries={{
                 small: "(max-width: 599px)",
                 large: "(min-width: 600px)",
@@ -58,7 +58,7 @@ const Header = () => {
                     </Fragment>
                     } */}
                     {matches.large &&
-                    <Fragment>
+                    <div className={headerStyles.container}>
                         <a className={headerStyles.a} href="/"><h1 className={headerStyles.title}>Thomas Dahlberg</h1></a>
                         <nav>
                             <ul className={headerStyles.navList}>
@@ -76,7 +76,7 @@ const Header = () => {
                                 </li>
                             </ul>
                         </nav>
-                    </Fragment>
+                    </div>
                     }
                 </Fragment>
             )}

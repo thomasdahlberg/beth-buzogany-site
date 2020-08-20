@@ -20,7 +20,7 @@ class HomeContent extends Component {
        }
 
     render(){
-    let { landingWork } = this.state
+    // let { landingWork } = this.state
     return (
         <div>
             <Media queries={{
@@ -32,8 +32,8 @@ class HomeContent extends Component {
                         {matches.small && 
                             <div className={workStyles.containerSmall}>
                                 <div className={workStyles.contentSmall}>
-                                    <img src={images(`./${landingWork.type}/${landingWork.file}.jpg`)} alt={landingWork.title}/>
-                                    <p><em>{landingWork.title}</em>; {landingWork.year}; {landingWork.materials}, {landingWork.dimensions}</p>      
+                                    <img src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
+                                    <p><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}, {this.props.landingWork.dimensions}</p>      
                                 </div>
                             </div>
                         }
@@ -48,8 +48,8 @@ class HomeContent extends Component {
                         {matches.large &&
                             <div className={workStyles.containerLarge}>
                                 <div className={workStyles.contentLarge}>
-                                    <img src={images(`./${landingWork.type}/${landingWork.file}.jpg`)} alt={landingWork.title}/>
-                                    <p><em>{landingWork.title}</em>; {landingWork.year}; {landingWork.materials}, {landingWork.dimensions}</p>      
+                                    <img src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
+                                    <p><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}, {this.props.landingWork.dimensions}</p>      
                                 </div>
                             </div>
                         }
