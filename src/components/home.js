@@ -25,8 +25,7 @@ class HomeContent extends Component {
         <div>
             <Media queries={{
                 small: "(max-width: 599px)",
-                medium: "(min-width: 600px) and (max-width: 1199px)",
-                large: "(min-width: 1200px)"
+                large: "(min-width: 600px)",
             }}>
                 {matches => (
                     <Fragment>
@@ -38,14 +37,14 @@ class HomeContent extends Component {
                                 </div>
                             </div>
                         }
-                        {matches.medium &&
+                        {/* {matches.medium &&
                             <div className={workStyles.containerMedium}>
                                 <div className={workStyles.contentMedium}>
                                     <img src={images(`./${landingWork.type}/${landingWork.file}.jpg`)} alt={landingWork.title}/>
                                     <p><em>{landingWork.title}</em>; {landingWork.year}; {landingWork.materials}, {landingWork.dimensions}</p>      
                                 </div>
                             </div>
-                        }
+                        } */}
                         {matches.large &&
                             <div className={workStyles.containerLarge}>
                                 <div className={workStyles.contentLarge}>

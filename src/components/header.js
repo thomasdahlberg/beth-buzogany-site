@@ -8,8 +8,7 @@ const Header = () => {
         <header className={headerStyles.container}>
             <Media queries={{
                 small: "(max-width: 599px)",
-                medium: "(min-width: 600px) and (max-width: 1199px)",
-                large: "(min-width: 1200px)"
+                large: "(min-width: 600px)",
             }}>
             {matches => (
                 <Fragment>
@@ -37,7 +36,7 @@ const Header = () => {
                         </nav>
                     </div>
                     }   
-                    {matches.medium &&
+                    {/* {matches.medium &&
                     <Fragment>
                         <a className={headerStyles.a} href="/"><h1 className={headerStyles.title}>Thomas Dahlberg</h1></a>
                         <nav>
@@ -57,7 +56,7 @@ const Header = () => {
                             </ul>
                         </nav>
                     </Fragment>
-                    }
+                    } */}
                     {matches.large &&
                     <Fragment>
                         <a className={headerStyles.a} href="/"><h1 className={headerStyles.title}>Thomas Dahlberg</h1></a>

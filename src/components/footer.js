@@ -6,8 +6,7 @@ const Footer = () => {
     return(
             <Media queries={{
           small: "(max-width: 599px)",
-          medium: "(min-width: 600px) and (max-width: 1199px)",
-          large: "(min-width: 1200px)"
+          large: "(min-width: 600px)",
         }}>
           {matches => (
             <Fragment>
@@ -17,12 +16,12 @@ const Footer = () => {
                     <p className={footerStyles.footerTextSmall}>Thomas Dahlberg © 2020</p>
                 </div>
             }
-            {matches.medium && 
+            {/* {matches.medium && 
                 <footer className={footerStyles.footer}>
                     <p className={footerStyles.contact}>thomas.dahlberg8(at)gmail(dot)com</p>
                     <p className={footerStyles.footerText}>Thomas Dahlberg © 2020</p>
                 </footer>
-            }
+            } */}
             {matches.large && 
                 <footer className={footerStyles.footer}>
                     <p className={footerStyles.contact}>thomas.dahlberg8(at)gmail(dot)com</p>

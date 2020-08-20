@@ -29,37 +29,10 @@ class Display extends Component {
         return(
                 <Media queries={{
                     small: "(max-width: 599px)",
-                    medium: "(min-width: 600px) and (max-width: 1199px)",
-                    large: "(min-width: 1200px)"
+                    large: "(min-width: 600px)"
                     }}>
                     {matches => (
                         <Fragment>
-                            {matches.small &&
-                                <div>
-                                    <div className={workStyles.contentSmall}>
-                                        <img ref={this.imageRef} src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
-                                        <p ref={this.captionRef}><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}; {this.props.landingWork.dimensions}</p>
-                                    </div>
-                                    <div className={workStyles.gallerySmall}>
-                                        {this.props.library.map(({ type, title, file }, idx)=>
-                                            <button className={workStyles.button} key={idx} id={idx} onClick={this.handleImageSelect}><img key={idx} id={idx}  src={images(`./${type}/${file}.jpg`)} alt={title}/></button>
-                                        )}
-                                    </div>
-                                </div>
-                            }
-                            {matches.medium &&
-                                <div className={workStyles.containerMedium}>
-                                    <div className={workStyles.contentMedium}>
-                                        <img ref={this.imageRef} src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
-                                        <p ref={this.captionRef}><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}; {this.props.landingWork.dimensions}</p>
-                                    </div>
-                                    <div className={workStyles.galleryMedium}>
-                                        {this.props.library.map(({ type, title, file }, idx)=>
-                                            <button className={workStyles.button} key={idx} id={idx} onClick={this.handleImageSelect}><img key={idx} id={idx}  src={images(`./${type}/${file}.jpg`)} alt={title}/></button>
-                                        )}
-                                    </div>
-                                </div>
-                            }
                             {matches.large &&
                                 <div className={workStyles.containerLarge}>
                                     <div className={workStyles.contentLarge}>
@@ -73,6 +46,32 @@ class Display extends Component {
                                     </div>
                                 </div>
                             }
+                            {matches.small &&
+                                <div>
+                                    <div className={workStyles.contentSmall}>
+                                        <img ref={this.imageRef} src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
+                                        <p ref={this.captionRef}><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}; {this.props.landingWork.dimensions}</p>
+                                    </div>
+                                    <div className={workStyles.gallerySmall}>
+                                        {this.props.library.map(({ type, title, file }, idx)=>
+                                            <button className={workStyles.button} key={idx} id={idx} onClick={this.handleImageSelect}><img key={idx} id={idx}  src={images(`./${type}/${file}.jpg`)} alt={title}/></button>
+                                        )}
+                                    </div>
+                                </div>
+                            }
+                            {/* {matches.medium &&
+                                <div className={workStyles.containerMedium}>
+                                    <div className={workStyles.contentMedium}>
+                                        <img ref={this.imageRef} src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
+                                        <p ref={this.captionRef}><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}; {this.props.landingWork.dimensions}</p>
+                                    </div>
+                                    <div className={workStyles.galleryMedium}>
+                                        {this.props.library.map(({ type, title, file }, idx)=>
+                                            <button className={workStyles.button} key={idx} id={idx} onClick={this.handleImageSelect}><img key={idx} id={idx}  src={images(`./${type}/${file}.jpg`)} alt={title}/></button>
+                                        )}
+                                    </div>
+                                </div>
+                            } */}
                         </Fragment>
                     )}
                 </Media>
