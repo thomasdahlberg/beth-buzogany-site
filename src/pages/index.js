@@ -20,16 +20,16 @@ class HomePage extends Component {
     return Math.floor(rand);
   }
 
-  // refreshState = () => {
-  //   let random = this.rand();
-  //   this.setState({
-  //     landingWork: workContent.homeLib[random]
-  //   })
-  // }
+  refreshState = () => {
+    let random = this.rand();
+    this.setState({
+      landingWork: workContent.homeLib[random]
+    })
+  }
   
-  // componentDidMount(){
-  //   this.refreshState();
-  // }
+  componentDidMount(){
+    this.refreshState();
+  }
 
   render(){
     return(

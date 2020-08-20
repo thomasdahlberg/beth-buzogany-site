@@ -29,25 +29,17 @@ class HomeContent extends Component {
             }}>
                 {matches => (
                     <Fragment>
-                        {matches.small && 
-                            <div className={workStyles.containerSmall}>
-                                <div className={workStyles.contentSmall}>
+                        {matches.large &&
+                            <div className={workStyles.containerLarge}>
+                                <div className={workStyles.contentLarge}>
                                     <img src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
                                     <p><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}, {this.props.landingWork.dimensions}</p>      
                                 </div>
                             </div>
                         }
-                        {/* {matches.medium &&
-                            <div className={workStyles.containerMedium}>
-                                <div className={workStyles.contentMedium}>
-                                    <img src={images(`./${landingWork.type}/${landingWork.file}.jpg`)} alt={landingWork.title}/>
-                                    <p><em>{landingWork.title}</em>; {landingWork.year}; {landingWork.materials}, {landingWork.dimensions}</p>      
-                                </div>
-                            </div>
-                        } */}
-                        {matches.large &&
-                            <div className={workStyles.containerLarge}>
-                                <div className={workStyles.contentLarge}>
+                        {matches.small && 
+                            <div className={workStyles.containerSmall}>
+                                <div className={workStyles.contentSmall}>
                                     <img src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
                                     <p><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}, {this.props.landingWork.dimensions}</p>      
                                 </div>
