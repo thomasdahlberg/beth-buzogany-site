@@ -86,6 +86,7 @@
     flex-direction: column;
     position: fixed; 
     top: 100px;
+    left: 0px;
 }
 
 .container-small p {
@@ -93,11 +94,19 @@
 }
 
 .content-small img,p {
-    max-height: 48vh;
+    max-height: 50vh;
     max-width: 90vw;
     margin-bottom: .5rem;
     // object-fit: cover;
     align-self: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+
+.container-small img {
+    position: fixed;
+    top: 100px;
 }
 
 .gallery-small {
@@ -108,7 +117,7 @@
 }
 
 .gallery-small img {
-    height: 10vh;
+    height: 8vh;
     margin: .5rem;
 }
 
