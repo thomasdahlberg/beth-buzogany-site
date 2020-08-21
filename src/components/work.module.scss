@@ -84,6 +84,8 @@
     position: fixed; 
     top: 3%;
     z-index: -1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .container-small p {
