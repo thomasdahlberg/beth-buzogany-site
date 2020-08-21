@@ -27,9 +27,9 @@ class HomePage extends Component {
     })
   }
   
-  componentDidMount(){
-    this.refreshState();
-  }
+  // componentDidMount(){
+  //   this.refreshState();
+  // }
 
   render(){
     return(

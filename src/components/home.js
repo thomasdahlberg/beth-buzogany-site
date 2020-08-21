@@ -23,7 +23,7 @@ class HomeContent extends Component {
     // let { landingWork } = this.state
     return (
         <div>
-            <Media queries={{
+            {/* <Media queries={{
                 small: "(max-width: 599px)",
                 large: "(min-width: 600px)",
             }}>
@@ -37,17 +37,17 @@ class HomeContent extends Component {
                                 </div>
                             </div>
                         }
-                        {matches.small && 
+                        {matches.small &&  */}
                             <div className={workStyles.containerSmall}>
                                 <div className={workStyles.contentSmall}>
                                     <img src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
                                     <p><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}, {this.props.landingWork.dimensions}</p>      
                                 </div>
                             </div>
-                        }
+                        {/* }
                     </Fragment>
                 )}
-            </Media>
+            </Media> */}
         </div>
     )
     }

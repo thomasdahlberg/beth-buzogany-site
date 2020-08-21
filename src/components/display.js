@@ -27,13 +27,13 @@ class Display extends Component {
 
     render(){
         return(
-                <Media queries={{
-                    small: "(max-width: 599px)",
-                    large: "(min-width: 600px)"
-                    }}>
-                    {matches => (
-                        <Fragment>
-                            {matches.large &&
+                // <Media queries={{
+                //     small: "(max-width: 599px)",
+                //     large: "(min-width: 600px)"
+                //     }}>
+                    // {matches => (
+                        // <Fragment>
+                            /* {matches.large &&
                                 <div className={workStyles.containerLarge}>
                                     <div className={workStyles.contentLarge}>
                                         <img ref={this.imageRef} src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
@@ -45,8 +45,8 @@ class Display extends Component {
                                         )}
                                     </div>
                                 </div>
-                            }
-                            {matches.small &&
+                            } */
+                            /* {matches.small && */
                                 <div>
                                     <div className={workStyles.contentSmall}>
                                         <img ref={this.imageRef} src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
@@ -58,10 +58,10 @@ class Display extends Component {
                                         )}
                                     </div>
                                 </div>
-                            }
+                            /* }
                         </Fragment>
                     )}
-                </Media>
+                </Media> */
         )
     }
 }

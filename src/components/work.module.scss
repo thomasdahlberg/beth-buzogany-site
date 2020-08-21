@@ -78,7 +78,7 @@
 
 .content-small {
     width: 100%;
-    max-height: 50vh;
+    max-height: 55vh;
     display: flex;
     flex-direction: column;
     position: fixed; 
@@ -90,8 +90,8 @@
     font-size: .75rem;
 }
 
-.content-small img {
-    max-height: 45vh;
+.content-small img,p {
+    max-height: 50vh;
     max-width: 65vw;
     margin-bottom: .5rem;
     // object-fit: cover;
@@ -106,8 +106,8 @@
 }
 
 .gallery-small img {
-    width: 10vw;
-    margin: 1rem;
+    height: 10vh;
+    margin: .5rem;
 }
 
 .gallery-small img:hover {

@@ -5,17 +5,15 @@ import headerStyles from './header.module.scss'
 
 const Header = () => {
     return(
-        <header>
-            <Media queries={{
+            /* <Media queries={{
                 small: "(max-width: 599px)",
                 large: "(min-width: 600px)",
             }}>
             {matches => (
                 <Fragment>
-                    {matches.small && 
+                    {matches.small &&  */
                     <div className={headerStyles.containerSmall}>
                         <a className={headerStyles.a} href="/"><h1 className={headerStyles.titleSmall}>Thomas Dahlberg</h1></a>
-                        <nav>
                             <ul className={headerStyles.navListSmall}>
                                 <li>
                                     <Link className={headerStyles.navItemSmall} to="/painting">Painting</Link>
@@ -33,11 +31,9 @@ const Header = () => {
                                     <a className={headerStyles.navItemSmall} href="../cv/Dahlberg_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
                                 </li>
                             </ul>
-                        </nav>
                     </div>
-                    }
-                    {matches.large &&
-                    <div className={headerStyles.container}>
+                 /* {matches.large && */
+                    /* <div className={headerStyles.container}>
                         <a className={headerStyles.a} href="/"><h1 className={headerStyles.title}>Thomas Dahlberg</h1></a>
                         <nav>
                             <ul className={headerStyles.navList}>
@@ -59,8 +55,7 @@ const Header = () => {
                     }  
                 </Fragment>
             )}
-            </Media>
-        </header>
+                </Media> */
     )
 }
 export default Header
