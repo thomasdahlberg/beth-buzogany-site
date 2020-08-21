@@ -81,7 +81,7 @@
     max-height: 55vh;
     display: flex;
     flex-direction: column;
-    position: fixed; 
+    position: absolute; 
     top: 3%;
     z-index: -1;
     -webkit-backface-visibility: hidden;
@@ -93,7 +93,7 @@
 }
 
 .content-small img,p {
-    max-height: 51vh;
+    max-height: 50vh;
     max-width: 90vw;
     margin-bottom: .5rem;
     // object-fit: cover;
