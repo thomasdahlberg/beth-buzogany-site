@@ -70,23 +70,23 @@
 // Small Styles
 
 .container-small{
+    top: 10vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-small {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-
+    margin: 0;
     z-index: -1;
-    width: 100%;
-    max-height: 55vh;
+    width: 90vw;
     display: flex;
     flex-direction: column;
     position: fixed; 
-    top: 100px;
-    left: 0px;
+    top: 12vh;
 }
 
 .container-small p {
@@ -94,19 +94,13 @@
 }
 
 .content-small img,p {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     max-height: 50vh;
     max-width: 90vw;
     margin-bottom: .5rem;
     // object-fit: cover;
     align-self: center;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-
-}
-
-.container-small img {
-    position: fixed;
-    top: 100px;
 }
 
 .gallery-small {
@@ -124,4 +118,5 @@
 .gallery-small img:hover {
     cursor: pointer;
 } 
+
 

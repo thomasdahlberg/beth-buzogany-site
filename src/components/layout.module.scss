@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .content {
@@ -10,19 +11,20 @@
     overflow: auto;
 }
 
-.footer {
-    background-color:#F9F8F8;
-    position: fixed;
-    bottom: 0px;
-    overflow: hide;
-    width: 100%;
-}
+// .footer {
+//     background-color:#F9F8F8;
+//     position: fixed;
+//     bottom: 0;
+//     overflow: hide;
+//     width: 100vw;
+// }
 
-.header {
-    background-color:#F9F8F8;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    overflow: hide;
-}
+// .header {
+//     background-color:#F9F8F8;
+//     position: fixed;
+//     top: 0;
+//     width: 100vw;
+//     height: 10vh;
+//     overflow: hide;
+// }
 

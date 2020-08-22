@@ -47,7 +47,7 @@ class Display extends Component {
                                 </div>
                             } */
                             /* {matches.small && */
-                                <div>
+                                <div className={workStyles.containerSmall}>
                                     <div className={workStyles.contentSmall}>
                                         <img ref={this.imageRef} src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
                                         <p ref={this.captionRef}><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}; {this.props.landingWork.dimensions}</p>

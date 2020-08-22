@@ -1,47 +1,66 @@
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+// .container {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     height: 10vh;
+//     width: 97vw;
+//     background-color:#F9F8F8;
+//     position: fixed;
+//     top: 0;
+//     overflow: hide;
+// }
 
 .container-small {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
+    // justify-content: space-between;
+    max-height: 10vh;
+    width: 100vw;
+    background-color:#F9F8F8;
+    position: fixed;
+    top: 0;
+    overflow: hide;
+    // border: solid black 2px;
 }
 
 
-.nav-list {
-    margin-top: 1.45rem;
-    margin-right: 1.45rem;
-    display: flex;
-    list-style-type: none;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
+// .nav-list {
+//     margin-top: 1.45rem;
+//     margin-right: 1.45rem;
+//     display: flex;
+//     list-style-type: none;
+//     flex-wrap: wrap;
+//     align-items: flex-end;
+//     justify-content: flex-end;
+// }
 
 .nav-list-small {
+    font-family: "Droid Sans Mono", monospace;
+    max-height: 5vh;
+    margin-top: 1rem;
     margin-bottom: 0rem;
     display: flex;
     list-style-type: none;
+    justify-content: center;
     flex-wrap: wrap;
     // align-items: flex-start;
     // justify-content: flex-start;
 }
 
-.nav-item {
-    color: #272838;
-    font-size: 1rem;
-    padding: .8rem;
-    text-decoration: none;
-}
+// .nav-item {
+//     color: #272838;
+//     font-size: 1rem;
+//     padding: .8rem;
+//     text-decoration: none;
+// }
 
 .nav-item-small {
     color: #272838;
     font-size: .75rem;
-    padding: .6rem;
+    padding: .5rem;
     text-decoration: none;
 }
 
@@ -61,7 +80,7 @@
 }
 
 .title {
-    margin-top: 1.45rem;
+    margin-top: 1;
     margin-left: 1.45rem;
     color: #272838;
     font-size: 1.85rem;
@@ -69,8 +88,9 @@
     font-family: "Helvetica", sans-serif;
 }
 .title-small {
-    margin-top: 1.45rem;
-    // margin-left: 1.45rem;
+    margin-top: 1vh;
+    margin-bottom: 5rem;
+    padding-bottom: .5rem;
     color: #272838;
     font-size: 1.5rem;
     text-decoration: none;
@@ -121,6 +141,8 @@
 
 .a {
     text-decoration: none;
+    padding: 0;
+    height: 4vh;
 }
 
 // * {
