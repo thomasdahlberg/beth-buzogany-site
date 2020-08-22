@@ -96,11 +96,18 @@
 .content-small img,p {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    max-height: 50vh;
+    max-height: 48vh;
     max-width: 90vw;
     margin-bottom: .5rem;
     // object-fit: cover;
     align-self: center;
+}
+
+.content-small {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: fixed;
+    top: 12vh;
 }
 
 .gallery-small {
