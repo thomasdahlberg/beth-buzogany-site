@@ -31,7 +31,7 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     max-width: 80vh;
-    max-height: 48vh;
+    max-height: 45vh;
     margin-top: 1rem;
     margin-bottom: 1rem;
     align-self: center;
@@ -41,6 +41,7 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: fixed;
+    max-width: 80vh;
     top: 12vh;
 }
 
