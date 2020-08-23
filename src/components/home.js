@@ -1,5 +1,4 @@
-import React, { Component, Fragment } from "react";
-import Media from 'react-media';
+import React, { Component } from "react";
 import workStyles from "./work.module.scss";
 let workContent = require("./workContent");
 const images = require.context("../../public/images", true);
@@ -20,36 +19,14 @@ class HomeContent extends Component {
        }
 
     render(){
-    // let { landingWork } = this.state
     return (
-        <div>
-            {/* <Media queries={{
-                small: "(max-width: 599px)",
-                large: "(min-width: 600px)",
-            }}>
-                {matches => (
-                    <Fragment>
-                        {matches.large &&
-                            <div className={workStyles.containerLarge}>
-                                <div className={workStyles.contentLarge}>
-                                    <img src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
-                                    <p><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}, {this.props.landingWork.dimensions}</p>      
-                                </div>
-                            </div>
-                        }
-                        {matches.small &&  */}
-                            <div className={workStyles.containerSmall}>
-                                <div className={workStyles.contentSmall}>
-                                    <img src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
-                                    <p><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}, {this.props.landingWork.dimensions}</p>      
-                                </div>
-                            </div>
-                        {/* }
-                    </Fragment>
-                )}
-            </Media> */}
+        <div className={workStyles.containerSmall}>
+            <div className={workStyles.contentSmall}>
+                <img src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
+                <p><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}, {this.props.landingWork.dimensions}</p>      
+            </div>
         </div>
-    )
+        )
     }
 }
 

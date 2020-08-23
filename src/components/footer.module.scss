@@ -1,29 +1,3 @@
-.footer {
-    bottom: 0px;
-    color: #272838;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color:#F9F8F8;
-    position: fixed;
-    overflow: hide;
-    width: 100vw;
-
-}
-
-.footer-text {
-    font-size: 1rem;
-    padding-top: 1.45rem;
-    margin-right: 1.45rem;
-    font-family: "Droid Sans Mono", monospace;
-}
-
-.contact {
-    font-size: 1rem;
-    margin-left: 1.45rem;
-    font-family: "Droid Sans Mono", monospace;
-}
-
 .footer-text-small {
     margin-bottom: 0;
     font-size: .75rem;
@@ -31,7 +5,8 @@
 }
 
 .contact-small {
-    // margin-top: .5rem;
+    text-decoration: none;
+    color: #272838;
     margin-bottom: 0;
     font-size: .75rem;
     font-family: "Droid Sans Mono", monospace;
