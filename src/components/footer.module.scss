@@ -1,14 +1,12 @@
 .footer-text-small {
-    margin-bottom: .5rem;
-    font-size: 1.25rem;
+    font-size: .9rem;
     font-family: "Droid Sans Mono", monospace;
 }
 
 .contact-small {
     text-decoration: none;
     color: #272838;
-    margin-bottom: .5rem;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-family: "Droid Sans Mono", monospace;
 }
 
@@ -19,10 +17,9 @@
     color: #272838;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color:#F9F8F8;
     position: fixed;
     overflow: hide;
-    width: 97vw;
+    width: 100vw;
 }
