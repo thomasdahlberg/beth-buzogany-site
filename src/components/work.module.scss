@@ -5,7 +5,7 @@
 }
 
 .container-small{
-    top: 10vh;
+    top: 12vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,23 +17,23 @@
     backface-visibility: hidden;
     margin: 0;
     z-index: -1;
-    width: 90vw;
     display: flex;
     flex-direction: column;
     position: fixed; 
-    top: 12vh;
+    top: 15vh;
 }
 
 .container-small p {
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 
 .content-small img,p {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    max-width: 80vh;
     max-height: 48vh;
-    max-width: 90vw;
-    margin-bottom: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     align-self: center;
 }
 
