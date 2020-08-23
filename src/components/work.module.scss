@@ -5,7 +5,7 @@
 }
 
 .container-small{
-    top: 12vh;
+    // top: 15vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,20 +30,13 @@
 .content-small img,p {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    max-width: 75vh;
-    max-height: 45vh;
+    max-width: 70vh;
+    max-height: 46vh;
     margin-top: 1rem;
     margin-bottom: 1rem;
     align-self: center;
 }
 
-.content-small {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: fixed;
-    max-width: 75vh;
-    top: 12vh;
-}
 
 .gallery-small {
     bottom: 10%;
