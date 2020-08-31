@@ -286,7 +286,7 @@ let paintLib = [
         title: "Where's Poppa?",
         file: "wp",
         year: 2018,
-        materials: "acryli  on canvas",
+        materials: "acrylic on canvas",
         dimensions: "24in x 20in",
         type: "painting"
     },
