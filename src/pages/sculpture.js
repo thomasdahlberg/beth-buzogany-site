@@ -9,7 +9,7 @@ class Sculpture extends Component {
         super(props) 
         let random = this.rand();
         this.state = {
-            sculpture: workContent.sculpLib,
+            workLib: workContent.sculpLib,
             landingWork: workContent.sculpLib[random]
         };
     }
@@ -24,7 +24,7 @@ class Sculpture extends Component {
             <Layout>
                 <Head title="Sculpture" />
                 <Display 
-                    library={this.state.sculpture}
+                    library={this.state.workLib}
                     landingWork={this.state.landingWork}    
                 />
             </Layout>

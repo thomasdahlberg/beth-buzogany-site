@@ -9,7 +9,7 @@ class Painting extends Component {
         super(props) 
         let random = this.rand();
         this.state = {
-            painting: workContent.paintLib,
+            workLib: workContent.paintLib,
             landingWork: workContent.paintLib[random]
         };
     }
@@ -24,7 +24,7 @@ class Painting extends Component {
             <Layout>
                 <Head title="Painting" />
                 <Display 
-                    library={this.state.painting}
+                    library={this.state.workLib}
                     landingWork={this.state.landingWork}    
                 />
             </Layout>

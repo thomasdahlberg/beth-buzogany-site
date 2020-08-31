@@ -8,7 +8,7 @@ class HomeContent extends Component {
       super(props) 
       let random = this.rand()
       this.state = {
-        homeImages: workContent.homeLib,
+        workLib: workContent.homeLib,
         landingWork: workContent.homeLib[random],
       };
     }

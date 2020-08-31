@@ -9,7 +9,7 @@ class Collage extends Component {
         super(props) 
         let random = this.rand();
         this.state = {
-            collage: workContent.collLib,
+            workLib: workContent.collLib,
             landingWork: workContent.collLib[random]
         };
     }
@@ -31,7 +31,7 @@ class Collage extends Component {
             <Layout>
                 <Head title="Collage" />
                 <Display 
-                    library={this.state.collage}
+                    library={this.state.workLib}
                     landingWork={this.state.landingWork}    
                 />
             </Layout>
