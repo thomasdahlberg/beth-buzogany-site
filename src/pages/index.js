@@ -26,7 +26,7 @@ class HomePage extends Component {
       landingWork: workContent.homeLib[random]
     })
   }
-  
+    
   componentDidMount(){
     this.refreshState();
   }

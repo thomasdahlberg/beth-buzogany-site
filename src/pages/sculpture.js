@@ -18,7 +18,7 @@ class Sculpture extends Component {
         let rand = Math.random() * maxLimit;
         return Math.floor(rand);
        }
-
+       
     render() {
         return (
             <Layout>

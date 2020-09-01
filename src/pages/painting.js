@@ -14,10 +14,11 @@ class Painting extends Component {
         };
     }
 
-    rand(maxLimit = workContent.paintLib.length) {
+    rand(maxLimit = workContent.collLib.length) {
         let rand = Math.random() * maxLimit;
         return Math.floor(rand);
        }
+        
 
     render() {
         return (

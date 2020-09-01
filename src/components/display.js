@@ -32,13 +32,26 @@ class Display extends Component {
     }
 
     handleKeyDown = (e) => {
+        e.preventDefault();
+        console.log(e);
+        console.log('firing');
         if(e.keyCode === 37){
             const left = document.getElementById('l');
             left.click();
-        } else if(e.keyCode === 39){
+        }
+        if(e.keyCode === 39){
             const right = document.getElementById('r');
             right.click();
-        } else return;
+        }
+        return false;
+    }
+
+    componentDidMount(){
+        document.addEventListener("keydown", this.handleKeyDown);
+    }
+
+    componentWillUnmount(){
+        document.removeEventListener("keydown", this.handleKeyDown);
     }
 
     render(){
@@ -57,7 +70,6 @@ class Display extends Component {
                         <button className={workStyles.button} key={idx} form={id} onClick={this.handleImageSelect}><img key={idx} id={id}  src={images(`./${type}/${file}.jpg`)} alt={title}/></button>
                     )}
                 </div>
-                <script>{document.addEventListener("keydown", this.handleKeyDown)}</script>
             </div>
         )
     }

@@ -19,13 +19,6 @@ class Collage extends Component {
         return Math.floor(rand);
        }
     
-       refreshState = () => this.setState({landingWork: workContent.collLib[this.rand()]})
-
-    componentDidMount(){
-        this.refreshState();
-    }
-   
-
     render() {
         return (
             <Layout>
