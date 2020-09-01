@@ -40,7 +40,7 @@ class Display extends Component {
         const zoomNode = this.zoomRef.current;
         if(this.state.bigImage === false) {
           zoomNode.style.opacity = 0;
-          zoomNode.style.zIndex = -1;
+          zoomNode.style.zIndex = -2;
         } else {
           zoomNode.style.opacity = 1;
           zoomNode.style.zIndex = 10;
@@ -58,8 +58,6 @@ class Display extends Component {
 
     handleKeyDown = (e) => {
         e.preventDefault();
-        console.log(e);
-        console.log('firing');
         if(e.keyCode === 37){
             const left = document.getElementById('l');
             left.click();
