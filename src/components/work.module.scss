@@ -25,16 +25,15 @@
 }
 
 .container-small p {
+    margin-top: 1rem;
     font-size: 1.1rem;
 }
 
 .content-small img,p {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    // margin-top: 1rem;
     margin-bottom: 0;
     max-height: 48vh;
-    // align-self: center;
 }
 
 
@@ -58,7 +57,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
 }
 
 .button-container button {
