@@ -4,11 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 1rem;
+    margin-left: 2rem;
     margin-right: 1rem;
-}
-
-.content {
-    flex: 1;
-    overflow: auto;
+    overflow-y: hidden;
+    overflow-x: visible;
 }
