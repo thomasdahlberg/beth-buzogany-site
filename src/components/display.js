@@ -6,11 +6,13 @@ class Display extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            responsive: true
+            bigImage: false,
         } 
     }
     
     imageRef = React.createRef();
+    bigImageRef = React.createRef();
+    zoomRef = React.createRef();
     captionRef = React.createRef();
     leftButRef = React.createRef();
     rightButRef = React.createRef();
@@ -24,11 +26,34 @@ class Display extends Component {
         const captionNode = this.captionRef.current;
         const leftButNode = this.leftButRef.current;
         const rightButNode = this.rightButRef.current;
+        const bigimageNode = this.bigImageRef.current;
         imageNode.src = images(`./${selectedWork.type}/${selectedWork.file}.jpg`);
         imageNode.alt = `${selectedWork.title}`;
+        bigimageNode.src = images(`./${selectedWork.type}/${selectedWork.file}.jpg`);
+        bigimageNode.alt = `${selectedWork.title}`;
         captionNode.innerHTML = `<em>${selectedWork.title}</em>; ${selectedWork.year}; ${selectedWork.materials}; ${selectedWork.dimensions}`;
         leftButNode.attributes[1].nodeValue = `${selectedWork.id - 1 >= 0 ? selectedWork.id - 1 : libSize-1}`;
         rightButNode.attributes[1].nodeValue = `${selectedWork.id + 1 < libSize ? selectedWork.id + 1 : 0}`;
+    }
+
+    handleBigImageStyle = () => {
+        const zoomNode = this.zoomRef.current;
+        if(this.state.bigImage === false) {
+          zoomNode.style.opacity = 0;
+          zoomNode.style.zIndex = -1;
+        } else {
+          zoomNode.style.opacity = 1;
+          zoomNode.style.zIndex = 10;
+        }
+      }
+
+    handleToggleBigImage = () => {
+        if(this.state.bigImage === false){
+            this.setState({bigImage: true});
+        } else {
+            this.setState({bigImage: false});
+        }
+        this.handleBigImageStyle();
     }
 
     handleKeyDown = (e) => {
@@ -42,6 +67,9 @@ class Display extends Component {
         if(e.keyCode === 39){
             const right = document.getElementById('r');
             right.click();
+        }
+        if(e.keyCode === 27 || e.keyCode === 13){
+            this.handleToggleBigImage();      
         }
         return false;
     }
@@ -57,10 +85,17 @@ class Display extends Component {
     render(){
         return(
             <div className={workStyles.containerSmall}>
+                <div ref={this.zoomRef} className={workStyles.bigImage}>
+                    <div className={workStyles.imgbtn}>
+                        <button tabIndex="-2" onKeyDown={this.handleKeyDown} onClick={this.handleToggleBigImage}><img ref={this.bigImageRef} src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title} id={this.props.landingWork.id}/></button>
+                    </div>
+                </div>
                 <div className={workStyles.contentSmall}>
                     <div className={workStyles.buttonContainer}>
                         <button ref={this.leftButRef} className={workStyles.navButton} form={this.props.landingWork.id - 1} onClick={this.handleImageSelect} id="l"onKeyDown={this.handleKeyDown}>&lsaquo;</button>
-                        <img ref={this.imageRef} src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title} id={this.props.landingWork.id}/>
+                        <div className={workStyles.imgbtn}>
+                            <button tabIndex="-1" onKeyDown={this.handleKeyDown} onClick={this.handleToggleBigImage}><img ref={this.imageRef} src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title} id={this.props.landingWork.id}/></button>
+                        </div>
                         <button ref={this.rightButRef} className={workStyles.navButton} form={this.props.landingWork.id + 1} id="r" onClick={this.handleImageSelect}>&rsaquo;</button>
                     </div>
                     <p ref={this.captionRef}><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}; {this.props.landingWork.dimensions}</p>
