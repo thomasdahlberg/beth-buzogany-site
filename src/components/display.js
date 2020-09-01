@@ -102,7 +102,7 @@ class Display extends Component {
                     {this.props.library.map(({ type, title, file, id}, idx)=>
                         <button className={workStyles.button} key={idx} form={id} onClick={this.handleImageSelect}><img key={idx} id={id}  src={images(`./${type}/${file}.jpg`)} alt={title}/></button>
                     )}
-                </div>
+               </div>
             </div>
         )
     }

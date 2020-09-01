@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .content-small {
@@ -51,7 +51,7 @@
 
 
 .gallery-small {
-    bottom: 10%;
+    bottom: 8%;
     position: absolute;
     display: flex;
     overflow: auto;
