@@ -9,22 +9,23 @@ class Painting extends Component {
         super(props) 
         let random = this.rand();
         this.state = {
-            painting: workContent.paintLib,
+            workLib: workContent.paintLib,
             landingWork: workContent.paintLib[random]
         };
     }
 
-    rand(maxLimit = workContent.paintLib.length) {
+    rand(maxLimit = workContent.collLib.length) {
         let rand = Math.random() * maxLimit;
         return Math.floor(rand);
        }
+        
 
     render() {
         return (
             <Layout>
                 <Head title="Painting" />
                 <Display 
-                    library={this.state.painting}
+                    library={this.state.workLib}
                     landingWork={this.state.landingWork}    
                 />
             </Layout>
