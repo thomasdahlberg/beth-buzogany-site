@@ -18,7 +18,6 @@ class Display extends Component {
     rightButRef = React.createRef();
 
     handleImageSelect = (e) => {
-        console.log(e.target.attributes[1].nodeValue);
         let selectedWork;
         e.target.localName === "img" ? selectedWork = this.props.library[e.target.id] : selectedWork = this.props.library[e.target.attributes[1].nodeValue];
         const libSize = this.props.library.length;
@@ -27,8 +26,8 @@ class Display extends Component {
         const leftButNode = this.leftButRef.current;
         const rightButNode = this.rightButRef.current;
         const bigimageNode = this.bigImageRef.current;
-        imageNode.src = images(`./${selectedWork.type}/${selectedWork.file}.jpg`);
-        imageNode.alt = `${selectedWork.title}`;
+        let srcURL = images(`./${selectedWork.type}/${selectedWork.file}.jpg`);
+        imageNode.style.backgroundImage = `url(${srcURL})`;
         bigimageNode.src = images(`./${selectedWork.type}/${selectedWork.file}.jpg`);
         bigimageNode.alt = `${selectedWork.title}`;
         captionNode.innerHTML = `<em>${selectedWork.title}</em>; ${selectedWork.year}; ${selectedWork.materials}; ${selectedWork.dimensions}`;
@@ -71,6 +70,18 @@ class Display extends Component {
         }
         return false;
     }
+    
+    boundingBox = {
+        style: {
+            backgroundImage: "url(" + images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`) + ")",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            height: "100%",
+            width: "100%",
+            },
+        data: this.props.landingWork
+    }
 
     componentDidMount(){
         document.addEventListener("keydown", this.handleKeyDown);
@@ -82,23 +93,25 @@ class Display extends Component {
 
     render(){
         return(
-            <div className={workStyles.containerSmall}>
+            <div className={workStyles.container}>
                 <div ref={this.zoomRef} className={workStyles.bigImage}>
                     <div className={workStyles.imgbtn}>
                         <button tabIndex="-2" onKeyDown={this.handleKeyDown} onClick={this.handleToggleBigImage}><img ref={this.bigImageRef} src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title} id={this.props.landingWork.id}/></button>
                     </div>
                 </div>
-                <div className={workStyles.contentSmall}>
+                <div className={workStyles.content}>
                     <div className={workStyles.buttonContainer}>
                         <button ref={this.leftButRef} className={workStyles.navButton} form={this.props.landingWork.id - 1} onClick={this.handleImageSelect} id="l"onKeyDown={this.handleKeyDown}>&lsaquo;</button>
                         <div className={workStyles.imgbtn}>
-                            <button tabIndex="-1" onKeyDown={this.handleKeyDown} onClick={this.handleToggleBigImage}><img ref={this.imageRef} src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title} id={this.props.landingWork.id}/></button>
+                            <button tabIndex="-1" onKeyDown={this.handleKeyDown} onClick={this.handleToggleBigImage}>
+                                <div ref={this.imageRef} className={workStyles.boundingBox} style={this.boundingBox.style}></div>
+                            </button>
                         </div>
                         <button ref={this.rightButRef} className={workStyles.navButton} form={this.props.landingWork.id + 1} id="r" onClick={this.handleImageSelect}>&rsaquo;</button>
                     </div>
                     <p ref={this.captionRef}><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}; {this.props.landingWork.dimensions}</p>
                 </div>
-                <div className={workStyles.gallerySmall}>
+                <div className={workStyles.gallery}>
                     {this.props.library.map(({ type, title, file, id}, idx)=>
                         <button className={workStyles.button} key={idx} form={id} onClick={this.handleImageSelect}><img key={idx} id={id}  src={images(`./${type}/${file}.jpg`)} alt={title}/></button>
                     )}

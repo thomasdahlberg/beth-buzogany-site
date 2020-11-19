@@ -1,11 +1,23 @@
 .container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    overflow-y: hidden;
-    overflow-x: scroll;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.header {
+  width: 100vw;
+}
+
+.footer {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+}
+.content {
+  position: relative;
+  width: 100%;
 }

@@ -18,12 +18,24 @@ class HomeContent extends Component {
         return Math.floor(rand);
        }
 
+    boundingBox = {
+        style: {
+            backgroundImage: "url(" + images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`) + ")",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            height: "100%",
+            width: "100%",
+            },
+        data: this.props.landingWork
+    }
+
     render(){
     return (
-        <div className={workStyles.containerSmall}>
-            <div className={workStyles.contentSmall}>
-                <img src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
-                <p><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}, {this.props.landingWork.dimensions}</p>      
+        <div className={workStyles.container}>
+            <div className={workStyles.content}>
+                <div className={workStyles.boundingBox} style={this.boundingBox.style}></div>
+                <p><em>{this.boundingBox.data.title}</em>; {this.boundingBox.data.year}; {this.boundingBox.data.materials}, {this.boundingBox.data.dimensions}</p>      
             </div>
         </div>
         )

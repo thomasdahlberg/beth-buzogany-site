@@ -1,25 +1,24 @@
 .footer-text-small {
-    font-size: .9rem;
-    font-family: "Droid Sans Mono", monospace;
+  font-size: 0.75rem;
+  font-family: "MS Sans-serif", sans-serif;
 }
 
 .contact-small {
-    text-decoration: none;
-    color: #272838;
-    font-size: 1.1rem;
-    font-family: "Droid Sans Mono", monospace;
+  text-decoration: none;
+  color: #272838;
+  font-size: 1rem;
+  font-family: "MS Sans-serif", sans-serif;
+
+  // font-family: "Droid Sans Mono", monospace;
 }
 
 .footer-small {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    bottom: 0px;
-    color: #272838;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color:#F9F8F8;
-    position: fixed;
-    overflow: hide;
-    width: 100vw;
+  color: #272838;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f8f8;
+  overflow: hide;
+  width: 100%;
 }

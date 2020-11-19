@@ -1,60 +1,62 @@
-
 .container-small {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-height: 10vh;
-    width: 100vw;
-    background-color:#F9F8F8;
-    position: fixed;
-    top: 0;
-    overflow: hide;
+  padding: 1rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //   max-height: 10vh;
+  width: 100vw;
+  background-color: #f9f8f8;
+  // position: absolute;
+  // top: 0;
+  overflow: hide;
+  // border: yellow solid 2px;
 }
 
 .nav-list-small {
-    font-family: "Droid Sans Mono", monospace;
-    max-height: 5vh;
-    margin-top: 3rem;
-    margin-bottom: 0rem;
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    flex-wrap: wrap;
+  // font-family: "Droid Sans Mono", monospace;
+  font-family: "MS Sans-serif", sans-serif;
+  max-height: 50%;
+  //   margin-top: 3rem;
+  margin-bottom: 0rem;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .nav-item-small {
-    color: #272838;
-    font-size: 1.5rem;
-    padding: .6rem;
-    margin-right: .5rem;
-    text-decoration: none;
+  color: #272838;
+  font-size: 1.5rem;
+  padding: 0.6rem;
+  margin-right: 0.5rem;
+  text-decoration: none;
 }
 
 .nav-item-small:hover {
-    color: #F9F8F8;
-    background-color: #7E7F9A;
+  color: #f9f8f8;
+  background-color: #7e7f9a;
 }
 
 .active-nav-item {
-    background-color: #272838;
-    color: #F9F8F8;
+  background-color: #272838;
+  color: #f9f8f8;
 }
 
 .title-small {
-    margin-top: 1vh;
-    margin-bottom: 5rem;
-    padding-bottom: .5rem;
-    color: #272838;
-    font-size: 2rem;
-    text-decoration: none;
-    font-family: "Helvetica", sans-serif;
+  //   margin-top: 1vh;
+  //   margin-bottom: 5rem;
+  padding-bottom: 0.5rem;
+  color: #272838;
+  //   font-size: 2rem;
+  height: 50%;
+  text-decoration: none;
+  font-family: "MS Sans-serif", sans-serif;
 }
 
 .a {
-    text-decoration: none;
-    padding: 0;
-    height: 4vh;
+  text-decoration: none;
+  padding: 0;
+  //   height: 4vh;
 }
-
