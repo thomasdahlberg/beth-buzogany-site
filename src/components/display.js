@@ -103,13 +103,13 @@ class Display extends Component {
                     <div className={workStyles.buttonContainer}>
                         <button ref={this.leftButRef} className={workStyles.navButton} form={this.props.landingWork.id - 1} onClick={this.handleImageSelect} id="l"onKeyDown={this.handleKeyDown}>&lsaquo;</button>
                         <div className={workStyles.imgbtn}>
-                            <button tabIndex="-1" onKeyDown={this.handleKeyDown} onClick={this.handleToggleBigImage}>
+                            <button tabIndex="-1" onKeyDown={this.handleKeyDown} onClick={this.handleToggleBigImage} className={workStyles.imgbtnbtn}>
                                 <div ref={this.imageRef} className={workStyles.boundingBox} style={this.boundingBox.style}></div>
+                                <p ref={this.captionRef}><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}; {this.props.landingWork.dimensions}</p>
                             </button>
                         </div>
                         <button ref={this.rightButRef} className={workStyles.navButton} form={this.props.landingWork.id + 1} id="r" onClick={this.handleImageSelect}>&rsaquo;</button>
                     </div>
-                    <p ref={this.captionRef}><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}; {this.props.landingWork.dimensions}</p>
                 </div>
                 <div className={workStyles.gallery}>
                     {this.props.library.map(({ type, title, file, id}, idx)=>

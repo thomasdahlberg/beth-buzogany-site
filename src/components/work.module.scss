@@ -5,6 +5,16 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
+.imgbtn p {
+  font-size: 1.75vw;
+  padding-top: 0.25rem;
+}
+
+.imgbtnbtn {
+  display: flex;
+  flex-direction: column;
+}
+
 .imgbtn {
   height: 100%;
   width: 100%;
@@ -30,7 +40,7 @@
 }
 
 .container {
-  height: 70vh;
+  height: 77vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -48,14 +58,17 @@
 }
 
 .content p {
-  font-size: 1rem;
-  padding-top: 0.25rem;
+  font-size: 1.75vw;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .gallery {
   position: absolute;
   bottom: 0;
   display: flex;
+  // height: 100%;
+  max-height: 25%;
   width: 100%;
   overflow-x: auto;
 }
@@ -65,7 +78,8 @@
 }
 
 .gallery img {
-  height: 8vh;
+  max-height: 10vh;
+  // max-width: 8vw;
   margin: 0.5rem;
 }
 

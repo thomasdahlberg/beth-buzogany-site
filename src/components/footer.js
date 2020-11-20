@@ -4,8 +4,7 @@ import footerStyles from "./footer.module.scss"
 const Footer = () => {
     return(
         <footer className={footerStyles.footerSmall}>
-            <a className={footerStyles.contactSmall} href="mailto:thomas.dahlberg8@gmail.com">thomas.dahlberg8(at)gmail(dot)com</a>
-            <p className={footerStyles.footerTextSmall}>Thomas Dahlberg © 2020</p>
+            <a className={footerStyles.contactSmall} href="mailto:thomas.dahlberg8@gmail.com">Thomas Dahlberg © 2020   |   thomas.dahlberg8(at)gmail(dot)com</a>
         </footer>
     )
 }
