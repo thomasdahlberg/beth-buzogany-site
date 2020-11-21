@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import workStyles from "../components/work.module.scss"
+import "../styles/index.scss";
+
 const images = require.context("../../public/images", true);
 
 class Display extends Component {
@@ -11,6 +13,7 @@ class Display extends Component {
     }
     
     imageRef = React.createRef();
+    mobileImageRef = React.createRef();
     bigImageRef = React.createRef();
     zoomRef = React.createRef();
     captionRef = React.createRef();
@@ -22,12 +25,15 @@ class Display extends Component {
         e.target.localName === "img" ? selectedWork = this.props.library[e.target.id] : selectedWork = this.props.library[e.target.attributes[1].nodeValue];
         const libSize = this.props.library.length;
         const imageNode = this.imageRef.current;
+        const mobileImageNode = this.mobileImageRef.current;
         const captionNode = this.captionRef.current;
         const leftButNode = this.leftButRef.current;
         const rightButNode = this.rightButRef.current;
         const bigimageNode = this.bigImageRef.current;
         let srcURL = images(`./${selectedWork.type}/${selectedWork.file}.jpg`);
         imageNode.style.backgroundImage = `url(${srcURL})`;
+        mobileImageNode.src = images(`./${selectedWork.type}/${selectedWork.file}.jpg`);
+        mobileImageNode.alt = `${selectedWork.title}`;
         bigimageNode.src = images(`./${selectedWork.type}/${selectedWork.file}.jpg`);
         bigimageNode.alt = `${selectedWork.title}`;
         captionNode.innerHTML = `<em>${selectedWork.title}</em>; ${selectedWork.year}; ${selectedWork.materials}; ${selectedWork.dimensions}`;
@@ -104,7 +110,8 @@ class Display extends Component {
                         <button ref={this.leftButRef} className={workStyles.navButton} form={this.props.landingWork.id - 1} onClick={this.handleImageSelect} id="l"onKeyDown={this.handleKeyDown}>&lsaquo;</button>
                         <div className={workStyles.imgbtn}>
                             <button tabIndex="-1" onKeyDown={this.handleKeyDown} onClick={this.handleToggleBigImage} className={workStyles.imgbtnbtn}>
-                                <div ref={this.imageRef} className={workStyles.boundingBox} style={this.boundingBox.style}></div>
+                                <div ref={this.imageRef} className="desktop-layout" style={this.boundingBox.style}></div>
+                                <img ref={this.mobileImageRef} className="mobile-layout" src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} />
                                 <p ref={this.captionRef}><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}; {this.props.landingWork.dimensions}</p>
                             </button>
                         </div>

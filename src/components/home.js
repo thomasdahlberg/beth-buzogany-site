@@ -10,7 +10,7 @@ class HomeContent extends Component {
       let random = this.rand()
       this.state = {
         workLib: workContent.homeLib,
-        landingWork: workContent.homeLib[random],
+        landingWork: workContent.homeLib[0],
       };
     }
     
@@ -37,11 +37,9 @@ class HomeContent extends Component {
     return (
         <div className={workStyles.container}>
             <div className={workStyles.content}>
-                {/* <div className="desktop-layout"> */}
-                    <div ref={this.desktopImage} style={this.boundingBox.style} className="desktop-layout"></div>
-                {/* </div> */}
+                <div ref={this.desktopImage} style={this.boundingBox.style} className="desktop-layout"></div>
                 <img className="mobile-layout" src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} />
-                <p><em>{this.state.landingWork.title}</em>; {this.state.landingWork.year}; {this.state.landingWork.materials}, {this.state.landingWork.dimensions}</p>      
+                <p><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}, {this.props.landingWork.dimensions}</p>      
             </div>
         </div>
         )
