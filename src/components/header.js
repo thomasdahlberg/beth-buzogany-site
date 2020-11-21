@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import headerStyles from './header.module.scss'
 import Dropdown from "./dropdown";
+import headerStyles from './header.module.scss';
 
 class Header extends Component {
     constructor(props) {
