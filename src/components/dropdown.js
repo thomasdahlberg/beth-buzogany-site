@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import styles from './Dropdown.module.scss';
 
