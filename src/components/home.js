@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import workStyles from "./work.module.scss";
+import styles from "../styles/work.module.scss";
 import "../styles/index.scss";
 let workContent = require("./workContent");
 const images = require.context("../../public/images", true);
@@ -35,10 +35,10 @@ class HomeContent extends Component {
 
     render(){
     return (
-        <div className={workStyles.container}>
-            <div className={workStyles.content}>
+        <div className={styles.container}>
+            <div className={styles.content}>
                 <div ref={this.desktopImage} style={this.boundingBox.style} className="desktop-layout"></div>
-                <img className="mobile-layout" src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} />
+                <img className="mobile-layout" src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title} />
                 <p><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}, {this.props.landingWork.dimensions}</p>      
             </div>
         </div>

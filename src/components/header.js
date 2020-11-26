@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Dropdown from "./dropdown";
-import headerStyles from './header.module.scss';
+import styles from '../styles/header.module.scss';
 
 class Header extends Component {
     constructor(props) {
@@ -12,8 +12,8 @@ class Header extends Component {
 
     render(){
         return(
-            <div className={headerStyles.containerSmall}>
-                <a className={headerStyles.a} href="/">Thomas Dahlberg</a>
+            <div className={styles.containerSmall}>
+                <a className={styles.a} href="/">Thomas Dahlberg</a>
                 <Dropdown />
             </div>
         )

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import workStyles from "../components/work.module.scss"
+import styles from "../styles/work.module.scss";
 import "../styles/index.scss";
 
 const images = require.context("../../public/images", true);
@@ -99,28 +99,28 @@ class Display extends Component {
 
     render(){
         return(
-            <div className={workStyles.container}>
-                <div ref={this.zoomRef} className={workStyles.bigImage}>
-                    <div className={workStyles.imgbtn}>
+            <div className={styles.container}>
+                <div ref={this.zoomRef} className={styles.bigImage}>
+                    <div className={styles.imgbtn}>
                         <button tabIndex="-2" onKeyDown={this.handleKeyDown} onClick={this.handleToggleBigImage}><img ref={this.bigImageRef} src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title} id={this.props.landingWork.id}/></button>
                     </div>
                 </div>
-                <div className={workStyles.content}>
-                    <div className={workStyles.buttonContainer}>
-                        <button ref={this.leftButRef} className={workStyles.navButton} form={this.props.landingWork.id - 1} onClick={this.handleImageSelect} id="l"onKeyDown={this.handleKeyDown}>&lsaquo;</button>
-                        <div className={workStyles.imgbtn}>
-                            <button tabIndex="-1" onKeyDown={this.handleKeyDown} onClick={this.handleToggleBigImage} className={workStyles.imgbtnbtn}>
+                <div className={styles.content}>
+                    <div className={styles.buttonContainer}>
+                        <button ref={this.leftButRef} className={styles.navButton} form={this.props.landingWork.id - 1} onClick={this.handleImageSelect} id="l"onKeyDown={this.handleKeyDown}>&lsaquo;</button>
+                        <div className={styles.imgbtn}>
+                            <button tabIndex="-1" onKeyDown={this.handleKeyDown} onClick={this.handleToggleBigImage} className={styles.imgbtnbtn}>
                                 <div ref={this.imageRef} className="desktop-layout" style={this.boundingBox.style}></div>
-                                <img ref={this.mobileImageRef} className="mobile-layout" src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} />
+                                <img ref={this.mobileImageRef} className="mobile-layout" src={images(`./${this.props.landingWork.type}/${this.props.landingWork.file}.jpg`)} alt={this.props.landingWork.title}/>
                                 <p ref={this.captionRef}><em>{this.props.landingWork.title}</em>; {this.props.landingWork.year}; {this.props.landingWork.materials}; {this.props.landingWork.dimensions}</p>
                             </button>
                         </div>
-                        <button ref={this.rightButRef} className={workStyles.navButton} form={this.props.landingWork.id + 1} id="r" onClick={this.handleImageSelect}>&rsaquo;</button>
+                        <button ref={this.rightButRef} className={styles.navButton} form={this.props.landingWork.id + 1} id="r" onClick={this.handleImageSelect}>&rsaquo;</button>
                     </div>
                 </div>
-                <div className={workStyles.gallery}>
+                <div className={styles.gallery}>
                     {this.props.library.map(({ type, title, file, id}, idx)=>
-                        <button className={workStyles.button} key={idx} form={id} onClick={this.handleImageSelect}><img key={idx} id={id}  src={images(`./${type}/${file}.jpg`)} alt={title}/></button>
+                        <button className={styles.button} key={idx} form={id} onClick={this.handleImageSelect}><img key={idx} id={id}  src={images(`./${type}/${file}.jpg`)} alt={title}/></button>
                     )}
                </div>
             </div>

@@ -1,10 +1,12 @@
-import React from "react"
-import footerStyles from "./footer.module.scss"
+import React from "react";
+import styles from "../styles/footer.module.scss";
+
+const year = new Date().getFullYear()
 
 const Footer = () => {
     return(
-        <footer className={footerStyles.footerSmall}>
-            <a className={footerStyles.contactSmall} href="mailto:thomas.dahlberg8@gmail.com">Thomas Dahlberg © 2020   |   thomas.dahlberg8(at)gmail(dot)com</a>
+        <footer className={styles.footerSmall}>
+            <a className={styles.contactSmall} href="mailto:thomas.dahlberg8@gmail.com">Thomas Dahlberg © {year}   |   thomas.dahlberg8(at)gmail(dot)com</a>
         </footer>
     )
 }

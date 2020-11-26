@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import styles from './dropdown.module.scss';
 import { Link } from 'gatsby';
+import styles from '../styles/dropdown.module.scss';
 
 class Dropdown extends Component {
     constructor(props) {
