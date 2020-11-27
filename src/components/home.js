@@ -10,7 +10,7 @@ class HomeContent extends Component {
       let random = this.rand()
       this.state = {
         workLib: workContent.homeLib,
-        landingWork: workContent.homeLib[0],
+        landingWork: workContent.homeLib[random],
       };
     }
     

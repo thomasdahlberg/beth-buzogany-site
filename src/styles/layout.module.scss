@@ -12,12 +12,13 @@
   width: 100vw;
 }
 
+.content {
+  position: relative;
+  width: 100%;
+}
+
 .footer {
   width: 100vw;
   position: absolute;
   bottom: 0;
-}
-.content {
-  position: relative;
-  width: 100%;
 }
