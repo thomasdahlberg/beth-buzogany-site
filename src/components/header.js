@@ -13,7 +13,12 @@ class Header extends Component {
     render(){
         return(
             <div className={styles.container}>
-                <a className={styles.a} href="/">Thomas Dahlberg</a>
+                <a 
+                    className={styles.a} 
+                    href="/"
+                >
+                    Thomas Dahlberg
+                </a>
                 <Dropdown />
             </div>
         )

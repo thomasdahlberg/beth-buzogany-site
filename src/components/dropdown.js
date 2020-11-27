@@ -39,14 +39,52 @@ class Dropdown extends Component {
         return(
             <div className={styles.wrapper}>
                 <div className={styles.container}>
-                    <button href="#" onClick={this.handleDropdown}><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;&nbsp;<i class="fa fa-bars"></i></button>
+                    <button onClick={this.handleDropdown}>
+                        <i 
+                            class="fa fa-arrow-right"
+                            aria-hidden="true"
+                        >
+                        </i>
+                        &nbsp;&nbsp;
+                        <i class="fa fa-bars"></i>
+                    </button>
                 </div>
-                <div className={styles.list} ref={this.dropdown} >
-                    <Link className={styles.navItemSmall} activeClassName ={styles.activeNavItem} to="/painting">Painting</Link>
-                    <Link className={styles.navItemSmall} activeClassName ={styles.activeNavItem} to="/sculpture">Sculpture</Link>
-                    <Link className={styles.navItemSmall} activeClassName ={styles.activeNavItem} to="/paper">Paper</Link>
-                    <Link className={styles.navItemSmall} activeClassName ={styles.activeNavItem} to="/collage">Collage</Link>
-                    <a className={styles.navItemSmall} href="../cv/Dahlberg_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                <div 
+                    className={styles.list}
+                    ref={this.dropdown}
+                >
+                    <Link
+                        className={styles.navItemSmall}
+                        to="/painting"
+                    >
+                        Painting
+                    </Link>
+                    <Link
+                        className={styles.navItemSmall}
+                        to="/sculpture"
+                    >
+                        Sculpture
+                    </Link>
+                    <Link
+                        className={styles.navItemSmall}
+                        to="/paper"
+                    >
+                        Paper
+                    </Link>
+                    <Link
+                        className={styles.navItemSmall}
+                        to="/collage"
+                    >
+                        Collage
+                    </Link>
+                    <a
+                        className={styles.navItemSmall}
+                        href="../cv/Dahlberg_CV.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        CV
+                    </a>
                 </div>
             </div>
         )

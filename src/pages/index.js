@@ -1,8 +1,9 @@
-import React, {Component} from "react"
+import React, {Component} from "react";
 import "../styles/index.scss"
-import Layout from "../components/layout"
-import Head from "../components/head"
-import HomeContent from "../components/home"
+import Layout from "../components/layout";
+import Head from "../components/head";
+import Display from "../components/display";
+// import HomeContent from "../components/home"
 let workContent = require('../components/workContent');
 
 class HomePage extends Component {
@@ -35,10 +36,15 @@ class HomePage extends Component {
     return(
         <Layout>
           <Head title="Home" />
-          <HomeContent
+          <Display
+            homepage={true}
             landingWork={this.state.landingWork}
             homeImages={this.state.homeImages}
           />
+          {/* <HomeContent
+            landingWork={this.state.landingWork}
+            homeImages={this.state.homeImages}
+          /> */}
         </Layout>
       )
   }
