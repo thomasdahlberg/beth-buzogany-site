@@ -1,35 +1,32 @@
-import React, { Component } from "react"
-import Layout from "../components/layout"
-import Head from "../components/head"
-import Display from "../components/display"
-let workContent = require('../components/workContent') 
+import React from "react";
+import { StaticQuery, graphql } from 'gatsby';
+import Layout from "../components/layout";
+import Display from "../components/display";
 
-class Paper extends Component {
-    constructor(props) {
-        super(props) 
-        let random = this.rand();
-        this.state = {
-            workLib: workContent.paperLib,
-            landingWork: workContent.paperLib[random]
-        };
-    }
-
-    rand(maxLimit = workContent.paperLib.length) {
-        let rand = Math.random() * maxLimit;
-        return Math.floor(rand);
-       }
-
-    render() {
-        return (
-            <Layout>
-                <Head title="Paper Works" />
-                <Display 
-                    library={this.state.workLib}
-                    landingWork={this.state.landingWork}    
-                />
-            </Layout>
-        )
-    }
+const Paper = () => {
+    return (
+        <Layout title="Paper Works">
+            <StaticQuery
+                query={graphql`
+                    query {
+                        allArtwork(filter: {type: {eq: "paper"}}) {
+                            edges {
+                                node {
+                                    title
+                                    file
+                                    year
+                                    materials
+                                    dimensions
+                                    type
+                                }
+                            }
+                        }
+                    }
+                `}
+                render={ data => <Display library={data.allArtwork.edges} /> }
+            />
+        </Layout>
+    )
 }
 
 export default Paper

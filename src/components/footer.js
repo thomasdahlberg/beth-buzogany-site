@@ -5,9 +5,9 @@ const year = new Date().getFullYear()
 
 const Footer = () => {
     return(
-        <footer className={styles.footerSmall}>
+        <footer className={styles.footer}>
             <a 
-                className={styles.contactSmall}
+                className={styles.contact}
                 href="mailto:thomas.dahlberg8@gmail.com"
             >
                 Thomas Dahlberg © {year} | thomas.dahlberg8(at)gmail(dot)com

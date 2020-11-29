@@ -1,0 +1,28 @@
+.gallery {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  max-height: 25%;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.gallery button:hover {
+  background-color: #7e7f9a;
+}
+
+.gallery img {
+  max-height: 10vh;
+  margin: 0.5rem;
+}
+
+.gallery img:hover {
+  background-color: #7e7f9a;
+  cursor: pointer;
+}
+
+.button {
+  outline: none;
+  border: none;
+  background-color: #f9f8f8;
+}

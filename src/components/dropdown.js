@@ -41,12 +41,12 @@ class Dropdown extends Component {
                 <div className={styles.container}>
                     <button onClick={this.handleDropdown}>
                         <i 
-                            class="fa fa-arrow-right"
+                            className="fa fa-arrow-right"
                             aria-hidden="true"
                         >
                         </i>
                         &nbsp;&nbsp;
-                        <i class="fa fa-bars"></i>
+                        <i className="fa fa-bars"></i>
                     </button>
                 </div>
                 <div 

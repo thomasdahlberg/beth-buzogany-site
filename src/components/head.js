@@ -1,6 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 import favicon from '../../static/favicon.ico';
 
 
@@ -14,6 +14,7 @@ const Head = ({ title }) => {
             }
         }
     `)
+    
     return (
         <div>
             <Helmet title={`${title} | ${data.site.siteMetadata.title}`}>
