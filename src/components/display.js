@@ -21,9 +21,6 @@ class Display extends Component {
         return Math.floor(randomValue);
     }
     
-    bigImageRef = React.createRef();
-    zoomRef = React.createRef();
-
     handleImageSelect = (e) => { 
         if(e.target.id === "l") {
             this.state.imageIdx === 0 ?
@@ -88,8 +85,6 @@ class Display extends Component {
                     <BigImage
                         landingWork={this.props.library[this.state.imageIdx]}
                         imageIdx={this.state.imageIdx} 
-                        zoomRef={this.zoomRef}
-                        bigImageRef={this.bigImageRef}
                         handleKeyDown={this.handleKeyDown}
                         handleToggleBigImage={this.handleToggleBigImage}
                     />
