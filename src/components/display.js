@@ -21,15 +21,17 @@ class Display extends Component {
         return Math.floor(randomValue);
     }
     
-    handleImageSelect = (e) => { 
+    handleImageSelect = (e) => {
+        const cachedImageIdx = this.state.imageIdx;
+        console.log(cachedImageIdx) 
         if(e.target.id === "l") {
-            this.state.imageIdx === 0 ?
+            cachedImageIdx === 0 ?
                 this.setState({ imageIdx: this.maxLibIdx - 1 })
-                : this.setState({ imageIdx: this.state.imageIdx - 1 });
+                : this.setState({ imageIdx: cachedImageIdx - 1 });
         } else if(e.target.id === "r") {
-            this.state.imageIdx === this.maxLibIdx -1 ?
+            cachedImageIdx === this.maxLibIdx - 1 ?
                 this.setState({ imageIdx: 0 })
-                : this.setState({ imageIdx: this.state.imageIdx + 1 });
+                : this.setState({ imageIdx: cachedImageIdx + 1 });
         } else {
             e.target.localName === "img" ?
             this.setState({ imageIdx: Number(e.target.id) })
@@ -59,7 +61,7 @@ class Display extends Component {
         if(e.keyCode === 39){
             let event = { 
                 target: {
-                    id: "l"
+                    id: "r"
                 }
             }
             this.handleImageSelect(event)
