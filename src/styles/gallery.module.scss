@@ -1,6 +1,4 @@
 .gallery {
-  position: absolute;
-  bottom: 0;
   display: flex;
   max-height: 25%;
   width: 100%;
@@ -12,7 +10,7 @@
 }
 
 .gallery img {
-  max-height: 10vh;
+  height: 5rem;
   margin: 0.5rem;
 }
 

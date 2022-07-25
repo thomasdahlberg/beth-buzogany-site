@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import "../styles/index.scss";
 import styles from "../styles/content.module.scss";
 
@@ -6,40 +6,26 @@ const images = require.context("../../public/images", true);
 
 
 const Content = (props) => {
-    let imageURI = images(`./${props.landingWork.node.type}/${props.landingWork.node.file}.jpg`);
-
-    let boundingBox = {
-        backgroundImage: "url(" + imageURI + ")",
-        backgroundSize: "contain",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        height: "100%",
-        width: "100%",
-    }
-
     return (
         <div className={styles.content}>
             {props.homepage ?
-                <Fragment>
-                    <div 
-                        style={boundingBox} 
-                        className="desktop-layout"
-                    >
-                    </div>
-                    <img 
-                        className="mobile-layout" 
-                        src={imageURI} 
-                        alt={props.landingWork.node.title} 
+                <div className={styles.homepage}>
+                    <img
+                        src={images(`./${props.landingWork.node.type}/${props.landingWork.node.file}.jpg`)}
+                        alt={props.landingWork.node.title}
+                        id={props.landingWork.node.id}
+                        className={styles.responsive}
                     />
                     <p>
                         <em>{props.landingWork.node.title}</em>
                         <span>; {props.landingWork.node.year}; {props.landingWork.node.materials}, {props.landingWork.node.dimensions}</span>
                     </p>
-                </Fragment>
+                </div>
                 :
                 <div className={styles.buttonContainer}>
                     <button 
                         id="l"
+                        aria-label="scroll image left"
                         className={styles.navButton}
                         onClick={props.handleImageSelect} 
                         onKeyDown={props.handleKeyDown}
@@ -48,20 +34,17 @@ const Content = (props) => {
                     </button>
                     <div className={styles.imgbtn}>
                         <button
-                            tabIndex="-1" 
+                            tabIndex="-1"
+                            aria-label="enlarge image" 
                             onKeyDown={props.handleKeyDown}
                             onClick={props.handleToggleBigImage}
                             className={styles.imgbtnbtn}
                         >
-                            <div
-                                className="desktop-layout"
-                                style={boundingBox}
-                            >
-                            </div>
                             <img
-                                className="mobile-layout"
-                                src={imageURI}
+                                src={images(`./${props.landingWork.node.type}/${props.landingWork.node.file}.jpg`)}
                                 alt={props.landingWork.node.title}
+                                id={props.landingWork.node.id}
+                                className={styles.responsive}
                             />
                             <p>
                                 <em>{props.landingWork.node.title}</em>
@@ -70,7 +53,8 @@ const Content = (props) => {
                         </button>
                     </div>
                     <button
-                        id="r" 
+                        id="r"
+                        aria-label="scroll image right"
                         className={styles.navButton} 
                         onClick={props.handleImageSelect}
                         onKeyDown={props.handleKeyDown}

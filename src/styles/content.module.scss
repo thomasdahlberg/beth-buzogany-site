@@ -3,15 +3,20 @@
   flex-direction: column;
   align-items: center;
   z-index: 0;
-  height: 85%;
+  height: calc(100% - 6rem);
   width: 100%;
 }
 
 .content p {
   font-family: "Droid Sans Mono", monospace;
-  font-size: 1.75vw;
+  font-size: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 1rem;
+}
+
+.responsive {
+  max-width: 100%;
+  max-height: 500px;
 }
 
 .imgbtnbtn {
@@ -20,16 +25,11 @@
 }
 
 .button-container {
-  height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.button-container button:hover {
-  color: #f9f8f8;
-  background-color: #7e7f9a;
+  height: 100%;
+  width: 100%;
 }
 
 .imgbtn {
@@ -57,7 +57,7 @@
 }
 
 .imgbtn p {
-  font-size: 1.75vw;
+  font-size: 1rem;
   padding-top: 0.25rem;
 }
 
@@ -71,4 +71,18 @@
   background-color: #f9f8f8;
   color: #272838;
   cursor: pointer;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 650px) {
+  .button-container .nav-button:hover {
+    color: #f9f8f8;
+    background-color: #7e7f9a;
+  }  
 }

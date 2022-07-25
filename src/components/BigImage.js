@@ -11,6 +11,7 @@ const BigImage = (props) => {
                     tabIndex="-2"
                     onKeyDown={props.handleKeyDown}
                     onClick={props.handleToggleBigImage}
+                    aria-label="zoom out image"
                 >
                     <img
                         src={images(`./${props.landingWork.node.type}/${props.landingWork.node.file}.jpg`)}

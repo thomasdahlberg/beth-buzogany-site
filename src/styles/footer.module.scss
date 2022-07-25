@@ -1,8 +1,7 @@
 .contact {
   text-decoration: none;
   color: #272838;
-  font-size: 2vw;
-  padding: 0.5vw;
+  font-size: 0.75rem;
   font-family: "MS Sans-serif", sans-serif;
 }
 
@@ -11,6 +10,13 @@
   display: flex;
   justify-content: center;
   background-color: #f9f8f8;
-  overflow: hide;
   width: 100%;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 650px) {
+  .contact {
+    font-size: 1rem;
+  }
 }

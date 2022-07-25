@@ -23,7 +23,6 @@ class Display extends Component {
     
     handleImageSelect = (e) => {
         const cachedImageIdx = this.state.imageIdx;
-        console.log(cachedImageIdx) 
         if(e.target.id === "l") {
             cachedImageIdx === 0 ?
                 this.setState({ imageIdx: this.maxLibIdx - 1 })

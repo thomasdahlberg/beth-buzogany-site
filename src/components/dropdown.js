@@ -39,13 +39,7 @@ class Dropdown extends Component {
         return(
             <div className={styles.wrapper}>
                 <div className={styles.container}>
-                    <button onClick={this.handleDropdown}>
-                        <i 
-                            className="fa fa-arrow-right"
-                            aria-hidden="true"
-                        >
-                        </i>
-                        &nbsp;&nbsp;
+                    <button onClick={this.handleDropdown} aria-label="site navigation dropdown menu">
                         <i className="fa fa-bars"></i>
                     </button>
                 </div>
