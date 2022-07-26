@@ -8,11 +8,10 @@ import "../styles/index.scss";
 class Display extends Component {
     constructor(props) {
         super(props)
-        const initialImageIdx = this.getRandomInt(this.maxLibIdx);
         this.state = {
             bigImage: false,
-            imageIdx: initialImageIdx,
-        } 
+            imageIdx: this.getRandomInt(this.maxLibIdx),
+        }
     }
 
     maxLibIdx = this.props.library.length;
@@ -31,10 +30,10 @@ class Display extends Component {
             cachedImageIdx === this.maxLibIdx - 1 ?
                 this.setState({ imageIdx: 0 })
                 : this.setState({ imageIdx: cachedImageIdx + 1 });
-        } else {
-            e.target.localName === "img" ?
+        } else if(e.target.localName === "img") {
             this.setState({ imageIdx: Number(e.target.id) })
-            : this.setState({ imageIdx: Number(e.target.attributes[1].nodeValue) });
+        } else {
+            this.setState({ imageIdx: Number(e.target.attributes[1].nodeValue) });
         }
     }
 
@@ -94,7 +93,6 @@ class Display extends Component {
                         homepage={this.props.homepage}
                         library={this.props.library}
                         landingWork={this.props.library[this.state.imageIdx]}
-                        imageIdx={this.state.imageIdx} 
                         handleImageSelect={this.handleImageSelect}
                         handleKeyDown={this.handleKeyDown}
                         handleToggleBigImage={this.handleToggleBigImage}
