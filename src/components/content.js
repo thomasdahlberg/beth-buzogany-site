@@ -9,18 +9,18 @@ const Content = (props) => {
     return (
         <div className={styles.content}>
             {props.homepage ?
-                <div className={styles.homepage}>
+                <figure className={styles.homepage}>
                     <img
                         src={images(`./${props.landingWork.node.type}/${props.landingWork.node.file}.jpg`)}
                         alt={props.landingWork.node.title}
                         id={props.landingWork.node.id}
                         className={styles.responsive}
                     />
-                    <p>
+                    <figcaption>
                         <em>{props.landingWork.node.title}</em>
                         <span>; {props.landingWork.node.year}; {props.landingWork.node.materials}, {props.landingWork.node.dimensions}</span>
-                    </p>
-                </div>
+                    </figcaption>
+                </figure>
                 :
                 <div className={styles.buttonContainer}>
                     <button 
@@ -29,6 +29,7 @@ const Content = (props) => {
                         className={styles.navButton}
                         onClick={props.handleImageSelect} 
                         onKeyDown={props.handleKeyDown}
+                        style={{cursor: 'w-resize'}}
                     >
                         &lsaquo;
                     </button>
@@ -40,16 +41,18 @@ const Content = (props) => {
                             onClick={props.handleToggleBigImage}
                             className={styles.imgbtnbtn}
                         >
-                            <img
-                                src={images(`./${props.landingWork.node.type}/${props.landingWork.node.file}.jpg`)}
-                                alt={props.landingWork.node.title}
-                                id={props.landingWork.node.id}
-                                className={styles.responsive}
-                            />
-                            <p>
-                                <em>{props.landingWork.node.title}</em>
-                                <span>; {props.landingWork.node.year}; {props.landingWork.node.materials}; {props.landingWork.node.dimensions}</span>
-                            </p>
+                            <figure>
+                                <img
+                                    src={images(`./${props.landingWork.node.type}/${props.landingWork.node.file}.jpg`)}
+                                    alt={props.landingWork.node.title}
+                                    id={props.landingWork.node.id}
+                                    className={styles.responsive}
+                                />
+                                <figcaption>
+                                    <em>{props.landingWork.node.title}</em>
+                                    <span>; {props.landingWork.node.year}; {props.landingWork.node.materials}; {props.landingWork.node.dimensions}</span>
+                                </figcaption>
+                            </figure>
                         </button>
                     </div>
                     <button
@@ -58,6 +61,7 @@ const Content = (props) => {
                         className={styles.navButton} 
                         onClick={props.handleImageSelect}
                         onKeyDown={props.handleKeyDown}
+                        style={{cursor: 'e-resize'}}
                     >
                         &rsaquo;
                     </button>

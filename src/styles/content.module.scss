@@ -7,16 +7,18 @@
   width: 100%;
 }
 
-.content p {
-  font-family: "Droid Sans Mono", monospace;
+.content figcaption, .content p {
+  color: #272838;
+  font-family: "MS Sans-serif", sans-serif;
   font-size: 1rem;
-  padding-top: 0.5rem;
+  padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
 
 .responsive {
   max-width: 100%;
   max-height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .imgbtnbtn {
@@ -63,21 +65,25 @@
 
 .nav-button {
   height: 100%;
-  font-family: "Droid Sans Mono", monospace;
+  font-family: "MS Sans-serif", sans-serif;
   font-size: 3rem;
   outline: none;
   border: none;
   padding: 1rem;
   background-color: #f9f8f8;
   color: #272838;
-  cursor: pointer;
 }
 
 .homepage {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 1rem;
+}
+
+.homepage img {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 @media screen and (min-width: 650px) {

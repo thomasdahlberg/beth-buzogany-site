@@ -8,17 +8,17 @@ import "../styles/index.scss";
 class Display extends Component {
     constructor(props) {
         super(props)
+        const initialImageIdx = this.getRandomInt(this.maxLibIdx);
         this.state = {
             bigImage: false,
-            imageIdx: this.getRandomInt(this.maxLibIdx),
+            imageIdx: initialImageIdx,
         } 
     }
 
     maxLibIdx = this.props.library.length;
 
     getRandomInt = (maxIdx) => {
-        let randomValue = Math.random() * maxIdx;
-        return Math.floor(randomValue);
+        return Math.floor(Math.random() * maxIdx);
     }
     
     handleImageSelect = (e) => {
@@ -81,7 +81,7 @@ class Display extends Component {
 
     render(){
         return(
-            <div className={styles.container}>
+            <div className={this.props.homepage ? styles.homepage : styles.container}>
                 {this.state.bigImage ? 
                     <BigImage
                         landingWork={this.props.library[this.state.imageIdx]}
