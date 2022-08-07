@@ -26,6 +26,7 @@ const Head = ({ title }) => {
                     rel="stylesheet"
                     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
                 />
+                <link href="http://fonts.cdnfonts.com/css/microsoft-sans-serif" rel="stylesheet"></link>
             </Helmet>
         </div>
     )
