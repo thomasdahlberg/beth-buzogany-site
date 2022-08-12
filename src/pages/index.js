@@ -9,7 +9,7 @@ const HomePage = () => {
       <StaticQuery
         query={graphql`
           query {
-              allArtwork {
+              allArtwork(filter: {title: {eq: "Agora"}}) {
                   edges {
                       node {
                           title
