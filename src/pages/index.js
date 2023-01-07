@@ -6,7 +6,7 @@ import Display from "../components/display";
 const HomePage = () => {
   return(
     <Layout title="Home">
-      <StaticQuery
+      {/* <StaticQuery
         query={graphql`
           query {
               allArtwork(filter: {title: {eq: "Agora"}}) {
@@ -29,7 +29,7 @@ const HomePage = () => {
             library={data.allArtwork.edges}
           />
         }
-      />
+      /> */}
     </Layout>
   )
 }

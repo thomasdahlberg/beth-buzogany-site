@@ -7,7 +7,7 @@ import Display from "../components/display";
 const Collage = () => {
     return (
         <Layout title="Collage">
-            <StaticQuery
+            {/* <StaticQuery
                 query={graphql`
                     query {
                         allArtwork(filter: {type: {eq: "collage"}}) {
@@ -25,7 +25,7 @@ const Collage = () => {
                     }
                 `}
                 render={ data => <Display library={data.allArtwork.edges} /> }
-            />
+            /> */}
         </Layout>
     )
 }

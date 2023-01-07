@@ -6,7 +6,7 @@ import Display from "../components/display";
 const Sculpture = () => {
     return (
         <Layout title="Sculpture">
-            <StaticQuery
+            {/* <StaticQuery
                 query={graphql`
                     query {
                         allArtwork(filter: {type: {eq: "sculpture"}}) {
@@ -24,7 +24,7 @@ const Sculpture = () => {
                     }
                 `}
                 render={ data => <Display library={data.allArtwork.edges} /> }
-            />
+            /> */}
         </Layout>
     )
 }

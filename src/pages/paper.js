@@ -6,7 +6,7 @@ import Display from "../components/display";
 const Paper = () => {
     return (
         <Layout title="Paper Works">
-            <StaticQuery
+            {/* <StaticQuery
                 query={graphql`
                     query {
                         allArtwork(filter: {type: {eq: "paper"}}) {
@@ -24,7 +24,7 @@ const Paper = () => {
                     }
                 `}
                 render={ data => <Display library={data.allArtwork.edges} /> }
-            />
+            /> */}
         </Layout>
     )
 }
