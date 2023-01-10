@@ -15,7 +15,7 @@ const BigImage = (props) => {
                     style={{cursor: 'zoom-out'}}
                 >
                     <img
-                        src={images(`./${props.landingWork.node.type}/${props.landingWork.node.file}.jpg`)}
+                        src={images(`./full/${props.landingWork.node.type}/${props.landingWork.node.file}.jpg`)}
                         alt={props.landingWork.node.title}
                         id={props.landingWork.node.id}
                     />

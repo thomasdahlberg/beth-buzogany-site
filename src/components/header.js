@@ -5,7 +5,10 @@ import styles from '../styles/header.module.scss';
 const Header = () => {
     return(
         <div className={styles.container}>
-            <h1 className={styles.h1}><a className={styles.a} href="/">Thomas Dahlberg</a></h1>
+            <div>
+                <h1 className={styles.h1} aria-describedby="job-title"><a className={styles.a} href="/">Beth Buzogany</a></h1>
+                <div className={styles.wrapper}><h2 className={styles.h2} id="job-title">Food Stylist</h2></div>
+            </div>
             <Dropdown />
         </div>
     )

@@ -6,18 +6,18 @@ import styles from '../styles/layout.module.scss';
 
 const Layout = (props) => {
     return(
-        <div className={styles.container}>
-            <div className={styles.header}>
+        <main className={styles.container}>
+            <header className={styles.header}>
                 <Head title={props.title} />
                 <Header />
-            </div>
+            </header>
             <div className={styles.content}>
                 {props.children}
             </div>
             <div className={styles.footer}>
                 <Footer />
             </div>
-        </div>
+        </main>
     )
 }
 

@@ -11,15 +11,11 @@ const Content = (props) => {
             {props.homepage ?
                 <figure className={styles.homepage}>
                     <img
-                        src={images(`./${props.landingWork.node.type}/${props.landingWork.node.file}.jpg`)}
+                        src={images(`./full/${props.landingWork.node.type}/${props.landingWork.node.file}.jpg`)}
                         alt={props.landingWork.node.title}
                         id={props.landingWork.node.id}
                         className={styles.responsive}
                     />
-                    <figcaption>
-                        <em>{props.landingWork.node.title}</em>
-                        <span>; {props.landingWork.node.year}; {props.landingWork.node.materials}, {props.landingWork.node.dimensions}</span>
-                    </figcaption>
                 </figure>
                 :
                 <div className={styles.buttonContainer}>
@@ -43,15 +39,11 @@ const Content = (props) => {
                         >
                             <figure>
                                 <img
-                                    src={images(`./${props.landingWork.node.type}/${props.landingWork.node.file}.jpg`)}
+                                    src={images(`./full/${props.landingWork.node.type}/${props.landingWork.node.file}.jpg`)}
                                     alt={props.landingWork.node.title}
                                     id={props.landingWork.node.id}
                                     className={styles.responsive}
                                 />
-                                <figcaption>
-                                    <em>{props.landingWork.node.title}</em>
-                                    <span>; {props.landingWork.node.year}; {props.landingWork.node.materials}; {props.landingWork.node.dimensions}</span>
-                                </figcaption>
                             </figure>
                         </button>
                     </div>

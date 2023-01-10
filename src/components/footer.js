@@ -8,9 +8,9 @@ const Footer = () => {
         <footer className={styles.footer}>
             <a 
                 className={styles.contact}
-                href="mailto:thomas.dahlberg8@gmail.com"
+                href="mailto:bethbuzogany@gmail.com"
             >
-                Thomas Dahlberg © {year} | thomas.dahlberg8(at)gmail(dot)com
+                Beth Buzogany © 2008 - {year} | bethbuzogany@gmail.com
             </a>
         </footer>
     )

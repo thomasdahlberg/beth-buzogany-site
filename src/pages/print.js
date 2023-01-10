@@ -4,18 +4,17 @@ import Layout from "../components/layout";
 import Display from "../components/display";
 
 
-const Collage = () => {
+const Print = () => {
     return (
-        <Layout title="Collage">
-            {/* <StaticQuery
+        <Layout title="Print">
+            <StaticQuery
                 query={graphql`
                     query {
-                        allArtwork(filter: {type: {eq: "collage"}}) {
+                        allArtwork(filter: {type: {eq: "print"}}) {
                             edges {
                                 node {
                                     title
                                     file
-                                    year
                                     materials
                                     dimensions
                                     type
@@ -25,9 +24,9 @@ const Collage = () => {
                     }
                 `}
                 render={ data => <Display library={data.allArtwork.edges} /> }
-            /> */}
+            />
         </Layout>
     )
 }
 
-export default Collage
+export default Print

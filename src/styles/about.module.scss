@@ -1,0 +1,43 @@
+.section {
+  color: #272838;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  margin: 0 1rem;
+}
+
+.section > p {
+  padding-bottom: 1rem;
+}
+
+.section > a {
+  display: block;
+  padding-bottom: .25rem;
+}
+
+.image {
+  height: 200px;
+  width: 150px;
+  background-color: red;
+  float: left;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+@media screen and (min-width: 650px) {
+  .section {
+    margin: 0 10rem;
+  }
+  .image {
+    float: left;
+    margin: 0 0.5rem 0.5rem 0;  
+  }
+
+  .list {
+    float: left;
+    width: 45%;
+    margin: 0.5rem;
+  }
+}
+@media screen and (min-width: 970px) {
+  .list {
+    width: 30%;
+  }
+}

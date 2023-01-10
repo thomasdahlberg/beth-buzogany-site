@@ -47,14 +47,14 @@
 .list a:focus {
   text-decoration: none;
   color: #f9f8f8;
-  background-color: #7e7f9a;
+  background-color: #944949;
 }
 
 .container button:focus {
   text-decoration: none;
   color: inherit;
   color: #f9f8f8;
-  background-color: #7e7f9a;
+  background-color: #944949;
 }
 
 @media screen and (min-width: 650px) {
@@ -70,13 +70,13 @@
   .list a:hover, .list a:focus {
     text-decoration: none;
     color: #f9f8f8;
-    background-color: #7e7f9a;
+    background-color: #944949;
   }
 
   .container button:hover, .container button:focus {
     text-decoration: none;
     color: inherit;
     color: #f9f8f8;
-    background-color: #7e7f9a;
+    background-color: #944949;
   }
 }

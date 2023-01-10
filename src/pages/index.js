@@ -6,15 +6,14 @@ import Display from "../components/display";
 const HomePage = () => {
   return(
     <Layout title="Home">
-      {/* <StaticQuery
+      <StaticQuery
         query={graphql`
           query {
-              allArtwork(filter: {title: {eq: "Agora"}}) {
+              allArtwork(filter: {file: {eq: "yogurt_bowl"}}) {
                   edges {
                       node {
                           title
                           file
-                          year
                           materials
                           dimensions
                           type
@@ -29,7 +28,7 @@ const HomePage = () => {
             library={data.allArtwork.edges}
           />
         }
-      /> */}
+      />
     </Layout>
   )
 }

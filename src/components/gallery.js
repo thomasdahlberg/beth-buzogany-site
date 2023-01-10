@@ -16,7 +16,7 @@ const Gallery = (props) => {
                     <img 
                         key={idx} 
                         id={idx}  
-                        src={images(`./${node.type}/${node.file}.jpg`)} 
+                        src={images(`./thumbs/${node.type}/${node.file}.jpg`)} 
                         alt={node.title}
                     />
                 </button>

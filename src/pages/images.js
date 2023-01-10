@@ -3,18 +3,17 @@ import { StaticQuery, graphql } from 'gatsby';
 import Layout from "../components/layout";
 import Display from "../components/display";
 
-const Painting = () => {        
+const Digital = () => {
     return (
-        <Layout title="Painting">
-            {/* <StaticQuery
+        <Layout title="Digital">
+            <StaticQuery
                 query={graphql`
                     query {
-                        allArtwork(filter: {type: {eq: "painting"}}) {
+                        allArtwork(filter: {type: {eq: "digital"}}) {
                             edges {
                                 node {
                                     title
                                     file
-                                    year
                                     materials
                                     dimensions
                                     type
@@ -24,9 +23,9 @@ const Painting = () => {
                     }
                 `}
                 render={ data => <Display library={data.allArtwork.edges} /> }
-            /> */}
+            />
         </Layout>
     )
 }
 
-export default Painting
+export default Digital

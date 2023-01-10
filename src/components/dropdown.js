@@ -49,36 +49,28 @@ class Dropdown extends Component {
                 >
                     <Link
                         className={styles.navItemSmall}
-                        to="/painting"
+                        to="/images"
                     >
-                        Painting
+                        Images
                     </Link>
                     <Link
                         className={styles.navItemSmall}
-                        to="/sculpture"
+                        to="/print"
                     >
-                        Sculpture
+                        Print & Packaging
                     </Link>
                     <Link
                         className={styles.navItemSmall}
-                        to="/paper"
+                        to="/clients"
                     >
-                        Paper
+                        Clients
                     </Link>
                     <Link
                         className={styles.navItemSmall}
-                        to="/collage"
+                        to="/about"
                     >
-                        Collage
+                        About
                     </Link>
-                    <a
-                        className={styles.navItemSmall}
-                        href="../cv/Dahlberg_CV.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        CV
-                    </a>
                 </div>
             </div>
         )

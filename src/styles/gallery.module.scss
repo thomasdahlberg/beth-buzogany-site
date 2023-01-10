@@ -1,12 +1,13 @@
 .gallery {
   display: flex;
+  justify-content: center;
   max-height: 25%;
   width: 100%;
   overflow-x: auto;
 }
 
 .gallery button:hover {
-  background-color: #7e7f9a;
+  background-color: #944949;
 }
 
 .gallery img {
@@ -15,7 +16,7 @@
 }
 
 .gallery img:hover {
-  background-color: #7e7f9a;
+  background-color: #944949;
   cursor: pointer;
 }
 

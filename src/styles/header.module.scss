@@ -14,11 +14,22 @@
   font-size: 2rem;
   text-decoration: none;
   padding: 0;
+}
+
+.a:hover, .a:focus {
+  text-decoration: underline;
+}
+
+.h1, .h2 {
+  letter-spacing: 0.012em;
+  color: #272838;
+  margin: 0;
   font-family: "Microsoft Sans Serif", sans-serif;
 }
 
-.h1 {
-  margin: 0;
+.h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 650px) {
@@ -28,5 +39,15 @@
   }
   .a {
     font-size: 3rem;
+  }
+
+  .h2 {
+    padding-top: 0.25rem;
+    font-size: 2rem;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
   }
 }
