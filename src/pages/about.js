@@ -7,7 +7,7 @@ const About = () => {
         <Layout title="About">
             <section className={styles.section}>
                 <h3>About Me</h3>
-                <div className={styles.image}></div>
+                <img className={styles.image} src="./beth-headshot.jpg" alt="headshot of Beth Buzogany"/>
                 <p>Beth Buzogany has over twenty years of experience as a food stylist and home economist. She has been engaged as a food stylist for projects of all types, including national advertising campaigns, television commercials, packaging, cookbooks, and editorial features.</p>
                 <p>Beth has coordinated sampling for live television audiences, developed recipes, and appeared on-air to demonstrate cooking techniques and recipe preparation. Her impressive client list includes such well-known enterprises as Pillsbury, The Biltmore Estate, The Pampered Chef and The Oprah Show.</p>
                 <p>Beth combines her expert culinary and artistic talents with her innovative problem-solving skills to create images that are not only mouth-watering but also exceed the clients' expectations every time. Her sense of humor and comfortable personality make for a pleasant day on set.</p>
